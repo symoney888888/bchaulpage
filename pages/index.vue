@@ -266,19 +266,22 @@ export default {
                     title: '協助托運',
                     caseImg: require('@/static/image/pc/main/caseImg.png'),
                     caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。<br />我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
                 },
                 {
                     title: '機場接車',
                     caseImg: require('@/static/image/pc/main/caseImg.png'),
                     caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。<br />我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
                 },
                 {
                     title: '超跑托運',
                     caseImg: require('@/static/image/pc/main/caseImg.png'),
                     caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。<br />我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
                 },
             ],
             news: [
