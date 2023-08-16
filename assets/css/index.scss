@@ -185,7 +185,7 @@ body {
             }
         }
         .des{
-            font-size: 1.66vw;
+            font-size: 1.85vw;
             font-weight: 300;
             font-stretch: normal;
             font-style: normal;
@@ -195,7 +195,7 @@ body {
             color: #fff;
             max-width: 51.25vw;
             margin: auto;
-            margin-top:2.29vw;
+            margin-top:3.2vw;
             @include mob-width {
                 max-width: 82vw;
                 margin-top:4.8vw;
@@ -731,6 +731,7 @@ body {
 #main{
     background-color: #000000;
     .container {
+        overflow-x: hidden;
         .banner {
             width: 100%;
             position: relative;
@@ -1187,6 +1188,7 @@ body {
             }
         }
         .case {
+            overflow-x: hidden;
             width: 100%;
             position: relative;
             $boxWidth_pc: 1920px;
@@ -1780,6 +1782,7 @@ body {
             }
         }
         .news{
+            overflow-x: hidden;
             width: 100%;
             position: relative;
             $boxWidth_pc: 1920px;
