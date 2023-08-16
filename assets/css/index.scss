@@ -1193,7 +1193,7 @@ body {
             $boxHeight_pc: 1128px;
             $boxWidth_mb: 375px;
             $boxHeight_mb: 712px;
-            background: url('~/static/image/pc/main/rectangle-15.png') no-repeat;
+            //background: url('~/static/image/pc/main/rectangle-15.png') no-repeat;
             background-size: 100%;
             @include mob-width {
                 background-image: none;
@@ -1534,7 +1534,7 @@ body {
                             position: absolute;
                             transition: all 0.2s ease;
                             @if $i == 1 {
-                                left: #{math.div(150px, $boxWidth_pc) * 100%};
+                                left: #{math.div(130px, $boxWidth_pc) * 100%};
                                 top: #{math.div(355px, $boxHeight_pc) * 100%};
                                 @include mob-width {
                                     left: #{math.div(37px, $boxWidth_mb) * 100%};
@@ -1548,7 +1548,7 @@ body {
                                     top: #{math.div(232px, $boxHeight_mb) * 100%};
                                 }
                             } @else if $i == 3 {
-                                left: #{math.div(135px, $boxWidth_pc) * 100%};
+                                left: #{math.div(130px, $boxWidth_pc) * 100%};
                                 top: #{math.div(857px, $boxHeight_pc) * 100%};
                                 @include mob-width {
                                     left: #{math.div(32px, $boxWidth_mb) * 100%};
@@ -1564,10 +1564,10 @@ body {
                             }
                             &-obj {
                                 color: #fff;
-                                font-size: 1.56vw;
+                                font-size: 2.135vw;
                                 letter-spacing: 0.38vw;
                                 @include mob-width {
-                                    font-size: 3.4vw;
+                                    font-size: 4vw;
                                 }
                             }
                         }
@@ -1595,12 +1595,12 @@ body {
                         }
                         &-obj {
                             //font-family: 'Aileron';
-                            font-size: 2.9vw;
+                            font-size: 2.1vw;
                             font-weight: 900;
                             letter-spacing: 0.7vw;
                             color: #fff;
                             @include mob-width {
-                                font-size: 5.8vw;
+                                font-size: 5vw;
                                 letter-spacing: 1.3vw;
                             }
                         }
@@ -1632,7 +1632,7 @@ body {
                             color: #fff;
                             word-wrap: break-word;
                             font-family: SourceHanSansTW;
-                            font-size: 1.56vw;
+                            font-size: 1.6vw;
                             font-weight: normal;
                             font-stretch: normal;
                             font-style: normal;
@@ -1640,7 +1640,7 @@ body {
                             letter-spacing: 0.38vw;
                             scrollbar-base-color: red;
                             @include mob-width {
-                                font-size: 12px;
+                                font-size: 14px;
                                 letter-spacing: 0.8vw;
                             }
                         }
@@ -2025,7 +2025,7 @@ body {
                             }
                             .title{
                                 position: absolute;
-                                color: #ffffff;
+                                color: #c7ff94;
                                 line-height: normal;
                                 font-size: 0.98vw;
                                 margin-top: #{math.div(36px, $boxWidth_pc) * 100%};
@@ -2034,6 +2034,9 @@ body {
                                 white-space: nowrap;
                                 overflow:hidden;
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 3.7vw;
+                                }
                             }
                             .des{
                                 position: absolute;
@@ -2056,6 +2059,9 @@ body {
                                 -webkit-box-orient: vertical;
                                 -webkit-line-clamp: 4;
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 3.2vw;
+                                }
                             }
                             .date{
                                 position: absolute;
@@ -2065,6 +2071,9 @@ body {
                                 bottom: #{math.div(23px, $boxWidth_pc) * 100%};
                                 left: #{math.div(23px, $boxWidth_pc) * 100%};
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 2.6vw;
+                                }
                             }
                         }
                     }
