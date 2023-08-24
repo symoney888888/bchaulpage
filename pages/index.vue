@@ -135,7 +135,7 @@
                         <div class="caseWrap">
                             <div class="caseName">
                                 <div class="caseName-anime">
-                                    <div class="caseName-anime-obj">Bc HAUL</div>
+                                    <div class="caseName-anime-obj">藍寶堅尼保養後協助拖運</div>
                                 </div>
                             </div>
                             <div class="caseDes">
@@ -258,70 +258,74 @@ export default {
             navBarOpen: false,
             caseList: [
                 {
-                    title: '超跑托運',
+                    title: '保養運送',
                     caseImg: require('@/static/image/pc/main/caseImg.png'),
                     caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: 'testeeeeeeeeeeeeededheufheriufheqroifjljfojdoasdjcliahcliuerhcfedwedhjoweqdojqwpdkmwq;eldmpoqwekdpokweqdlqw,edl;wkepodjqpwodkpoqkwdpokweqpodkqweopdkiouhcjlnadslkjcnadljcniuerhciouhdcjklandsckljhasdiuchsaiuldchjlsadclsaduhcosadijcioasdjcio;tstetdgedgwhbckjdsncljndsxlkwnexpiewnmxlkasmx',
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
+                },
+                {
+                    title: '協助托運',
+                    caseImg: require('@/static/image/pc/main/caseImg.png'),
+                    caseBg: require('@/static/image/pc/main/car-background.png'),
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
+                },
+                {
+                    title: '機場接車',
+                    caseImg: require('@/static/image/pc/main/caseImg.png'),
+                    caseBg: require('@/static/image/pc/main/car-background.png'),
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
                 },
                 {
                     title: '超跑托運',
                     caseImg: require('@/static/image/pc/main/caseImg.png'),
                     caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '2testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttest',
-                },
-                {
-                    title: '超跑托運',
-                    caseImg: require('@/static/image/pc/main/caseImg.png'),
-                    caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '3testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttest',
-                },
-                {
-                    title: '超跑托運',
-                    caseImg: require('@/static/image/pc/main/caseImg.png'),
-                    caseBg: require('@/static/image/pc/main/car-background.png'),
-                    des: '實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例實際案例',
+                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。 \
+                            我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
                 },
             ],
             news: [
                 {
-                    title: 'news1',
-                    des: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttest',
-                    image: require('@/static/image/pc/main/12-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg1.png'),
                     date: '2023.08.03',
                     url: '/',
                 },
                 {
-                    title: 'news1',
-                    des: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
-                    image: require('@/static/image/pc/main/14-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg2.png'),
                     date: '2023.08.03',
                     url: '/aboutUs',
                 },
                 {
-                    title: 'news1',
-                    des: 'testtesttesttest',
-                    image: require('@/static/image/pc/main/12-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg1.png'),
                     date: '2023.08.03',
                     url: '/',
                 },
                 {
-                    title: 'news1',
-                    des: 'testtesttesttest',
-                    image: require('@/static/image/pc/main/14-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg2.png'),
                     date: '2023.08.03',
                     url: '/aboutUs',
                 },
                 {
-                    title: 'news1',
-                    des: 'testtesttesttest',
-                    image: require('@/static/image/pc/main/12-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg1.png'),
                     date: '2023.08.03',
                     url: '/',
                 },
                 {
-                    title: 'news1',
-                    des: 'testtesttesttest',
-                    image: require('@/static/image/pc/main/14-copy.png'),
+                    title: '寶輇車業 試營運！',
+                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
+                    image: require('@/static/image/pc/main/newsImg2.png'),
                     date: '2023.08.03',
                     url: '/',
                 },

@@ -185,7 +185,7 @@ body {
             }
         }
         .des{
-            font-size: 1.66vw;
+            font-size: 1.85vw;
             font-weight: 300;
             font-stretch: normal;
             font-style: normal;
@@ -195,7 +195,7 @@ body {
             color: #fff;
             max-width: 51.25vw;
             margin: auto;
-            margin-top:2.29vw;
+            margin-top:3.2vw;
             @include mob-width {
                 max-width: 82vw;
                 margin-top:4.8vw;
@@ -731,6 +731,7 @@ body {
 #main{
     background-color: #000000;
     .container {
+        overflow-x: hidden;
         .banner {
             width: 100%;
             position: relative;
@@ -1187,6 +1188,7 @@ body {
             }
         }
         .case {
+            overflow-x: hidden;
             width: 100%;
             position: relative;
             $boxWidth_pc: 1920px;
@@ -1534,7 +1536,7 @@ body {
                             position: absolute;
                             transition: all 0.2s ease;
                             @if $i == 1 {
-                                left: #{math.div(150px, $boxWidth_pc) * 100%};
+                                left: #{math.div(130px, $boxWidth_pc) * 100%};
                                 top: #{math.div(355px, $boxHeight_pc) * 100%};
                                 @include mob-width {
                                     left: #{math.div(37px, $boxWidth_mb) * 100%};
@@ -1548,7 +1550,7 @@ body {
                                     top: #{math.div(232px, $boxHeight_mb) * 100%};
                                 }
                             } @else if $i == 3 {
-                                left: #{math.div(135px, $boxWidth_pc) * 100%};
+                                left: #{math.div(130px, $boxWidth_pc) * 100%};
                                 top: #{math.div(857px, $boxHeight_pc) * 100%};
                                 @include mob-width {
                                     left: #{math.div(32px, $boxWidth_mb) * 100%};
@@ -1564,10 +1566,10 @@ body {
                             }
                             &-obj {
                                 color: #fff;
-                                font-size: 1.56vw;
+                                font-size: 2.135vw;
                                 letter-spacing: 0.38vw;
                                 @include mob-width {
-                                    font-size: 3.4vw;
+                                    font-size: 4vw;
                                 }
                             }
                         }
@@ -1595,12 +1597,12 @@ body {
                         }
                         &-obj {
                             //font-family: 'Aileron';
-                            font-size: 2.9vw;
+                            font-size: 2.1vw;
                             font-weight: 900;
                             letter-spacing: 0.7vw;
                             color: #fff;
                             @include mob-width {
-                                font-size: 5.8vw;
+                                font-size: 5vw;
                                 letter-spacing: 1.3vw;
                             }
                         }
@@ -1632,7 +1634,7 @@ body {
                             color: #fff;
                             word-wrap: break-word;
                             font-family: SourceHanSansTW;
-                            font-size: 1.56vw;
+                            font-size: 1.6vw;
                             font-weight: normal;
                             font-stretch: normal;
                             font-style: normal;
@@ -1640,7 +1642,7 @@ body {
                             letter-spacing: 0.38vw;
                             scrollbar-base-color: red;
                             @include mob-width {
-                                font-size: 12px;
+                                font-size: 14px;
                                 letter-spacing: 0.8vw;
                             }
                         }
@@ -1780,6 +1782,7 @@ body {
             }
         }
         .news{
+            overflow-x: hidden;
             width: 100%;
             position: relative;
             $boxWidth_pc: 1920px;
@@ -2025,7 +2028,7 @@ body {
                             }
                             .title{
                                 position: absolute;
-                                color: #ffffff;
+                                color: #c7ff94;
                                 line-height: normal;
                                 font-size: 0.98vw;
                                 margin-top: #{math.div(36px, $boxWidth_pc) * 100%};
@@ -2034,6 +2037,9 @@ body {
                                 white-space: nowrap;
                                 overflow:hidden;
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 3.7vw;
+                                }
                             }
                             .des{
                                 position: absolute;
@@ -2056,6 +2062,9 @@ body {
                                 -webkit-box-orient: vertical;
                                 -webkit-line-clamp: 4;
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 3.2vw;
+                                }
                             }
                             .date{
                                 position: absolute;
@@ -2065,6 +2074,9 @@ body {
                                 bottom: #{math.div(23px, $boxWidth_pc) * 100%};
                                 left: #{math.div(23px, $boxWidth_pc) * 100%};
                                 letter-spacing: 2.88px;
+                                @include mob-width {
+                                    font-size: 2.6vw;
+                                }
                             }
                         }
                     }
