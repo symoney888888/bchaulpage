@@ -1193,7 +1193,7 @@ body {
             $boxHeight_pc: 1128px;
             $boxWidth_mb: 375px;
             $boxHeight_mb: 712px;
-            background: url('~/static/image/pc/main/rectangle-15.png') no-repeat;
+            //background: url('~/static/image/pc/main/rectangle-15.png') no-repeat;
             background-size: 100%;
             @include mob-width {
                 background-image: none;
@@ -2320,6 +2320,11 @@ body {
                 margin-bottom: 5.5vw;
                 &:hover{
                     background-color: #564c4c;
+                    .newsTxt{
+                        .title{
+                            color:#c7ff94;
+                        }
+                    }
                 }
                 .newsImg{
                     width: 100%;

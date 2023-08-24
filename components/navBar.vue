@@ -13,13 +13,13 @@
                             <img :src="require('@/static/image/pc/main/logo-img.png')" alt="" />
                         </div>
                     </a>
-                    <a href="">
+                    <a href="/aboutUs">
                         <div class="toAboutUs navItem">關於我們</div>
                     </a>
-                    <a href="">
+                    <a href="/model">
                         <div class="toModel navItem">車種介紹</div>
                     </a>
-                    <a href="">
+                    <a href="/news">
                         <div class="toNews navItem">最新消息</div>
                     </a>
                     <a href="">

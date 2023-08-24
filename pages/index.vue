@@ -78,10 +78,12 @@
                 </div>
                 <div class="visionBtnContain">
                     <div class="visionBtn">
-                        <div :class="`visionBtn__${index + 1}`" v-for="(item, index) in 4" :key="'visionBtn' + index" data-anime>
-                            <div :class="`visionBtn__${index + 1}-anime visionBtnAnime`">
-                                <div :class="`visionBtn__${index + 1}-anime-obj`"></div>
-                            </div>
+                        <div :class="`visionBtn__${index + 1}`" v-for="(item, index) in visionUrl" :key="'visionBtn' + index" data-anime>
+                            <a :href="item.url">
+                                <div :class="`visionBtn__${index + 1}-anime visionBtnAnime`">
+                                    <div :class="`visionBtn__${index + 1}-anime-obj`"></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -323,6 +325,12 @@ export default {
                     date: '2023.08.03',
                     url: '/',
                 },
+            ],
+            visionUrl:[
+                {url:'/model'},
+                {url:'/news'},
+                {url:'/model'},
+                {url:'news'}
             ],
             swiperOption: {
                 autoplay: 2000,
