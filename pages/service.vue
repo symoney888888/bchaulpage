@@ -2,7 +2,7 @@
     <div>
         <Header @navBarOpen="navBarOpen = true" />
         <right-side-bar />
-        <div id="aboutUsPage">
+        <div id="servicePage">
             <section class="banner">
                 <div class="bgImg">
                     <div class="bgImg-anime">
@@ -11,87 +11,24 @@
                 </div>
                 <div class="title">
                     <div class="title-anime">
-                        <div class="title-anime-obj">ABOUT US</div>
+                        <div class="title-anime-obj">SERVICE</div>
                     </div>
                 </div>
                 <div class="subTitle">
                     <div class="subTitle-anime">
-                        <div class="subTitle-anime-obj">關於我們</div>
+                        <div class="subTitle-anime-obj">服務項目</div>
                     </div>
                 </div>
                 <div class="navBtn">
                     <div class="navBtnWrap">
-                        <div class="navBtnAnime"><span @click="scrollTo('vision')">公司簡介</span></div>
-                        <div class="navBtnAnime"><span @click="scrollTo('ourTeam')">員工技術技能簡介</span></div>
-                        <div class="navBtnAnime"><span @click="scrollTo('legalTeam')">法律顧問團隊</span></div>
+                        <div class="navBtnAnime"><span @click="scrollTo('vision')">頂級車輛托運</span></div>
+                        <div class="navBtnAnime"><span @click="scrollTo('ourTeam')">服務案例</span></div>
+                        <div class="navBtnAnime"><span @click="scrollTo('legalTeam')">常見問題</span></div>
                     </div>
                 </div>
                 <div class="height"></div>
             </section>
-            <section class="vision">
-                <div class="bgIcon">
-                    <div :class="`bgIcon__${index + 1}`" v-for="(item, index) in 2" :key="'bgIcon' + index" data-anime>
-                        <div :class="`bgIcon__${index + 1}-anime bgIconAnime`">
-                            <div :class="`bgIcon__${index + 1}-anime-obj`"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="title">
-                    <div class="title-anime">
-                        <div class="title-anime-obj"></div>
-                    </div>
-                </div>
-                <div class="des">
-                    寶輇車業為了運送特殊車輛及各是超跑而誕生的，位於台中市西屯區。<br />
-                    我們了解超跑的客戶最大需求，也為您的愛車量身打造最完善的服務。<br />
-                    我們的車體是獨立的空間運送，絕不讓您的愛車日曬雨淋，<br />
-                    一次只能運送一輛。<br />
-                    寶輇車業對於運送任務的司機師傅們有嚴格的把關要求，每一位司機皆受過<br />
-                    專業的培訓課程，並要求重視對待客戶親切服務和處理態度。<br />
-                    客戶放心和滿意的服務，就是我們最大的動力和目標。<br />
-                    服務地區為全台灣本島
-                </div>
-                <div class="height"></div>
-            </section>
-            <section class="service">
-                <div class="bgIcon">
-                    <div :class="`bgIcon__${index + 1}`" v-for="(item, index) in 2" :key="'bgIcon' + index" data-anime>
-                        <div :class="`bgIcon__${index + 1}-anime bgIconAnime`">
-                            <div :class="`bgIcon__${index + 1}-anime-obj`"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="title">
-                    <div class="title-anime">
-                        <div class="title-anime-obj"></div>
-                    </div>
-                </div>
-                <div class="btnBox">
-                    <div class="serviceBtn">
-                        <div :class="`serviceBtn__${index + 1}`" v-for="(item, index) in serviceTxt" :key="'serviceBtn' + index" data-anime>
-                            <a :href="item.url">
-                                <div :class="`serviceBtn__${index + 1}-anime serviceBtnAnime`">
-                                    <div :class="`serviceBtn__${index + 1}-anime-obj`">
-                                        <div class="serviceTxtBg"></div>
-                                        <div class="serviceTxt">
-                                            <div class="wrap">
-                                                <div class="txt">
-                                                    {{ item.txt }}
-                                                </div>
-                                                <div class="serviceArrow">
-                                                    <img :src="require('@/static/image/pc/aboutUs/serviceArrow.png')" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="height"></div>
-            </section>
-            <section class="ourTeam">
+            <!-- <section class="ourTeam">
                 <div class="bgIcon">
                     <div :class="`bgIcon__${index + 1}`" v-for="(item, index) in 2" :key="'bgIcon' + index" data-anime>
                         <div :class="`bgIcon__${index + 1}-anime bgIconAnime`">
@@ -127,38 +64,35 @@
                         </swiper>
                     </div>
                 </div>
-
                 <div class="height"></div>
-            </section>
-            <section class="legalTeam">
+            </section> -->
+            <section class="case">
                 <div class="bgIcon">
                     <div class="bgIcon-anime">
                         <div class="bgIcon-anime-obj"></div>
                     </div>
                 </div>
-                <div class="title">
-                    <div class="title-anime">
-                        <div class="title-anime-obj"></div>
+                <div class="title1">
+                    <div class="title1-anime">
+                        <div class="title1-anime-obj"></div>
                     </div>
                 </div>
-                <div class="subTitle1">
-                    <div class="subTitle1-anime">
-                        <p class="subTitle1-anime-obj">寶輇車業專業法律顧問團隊</p>
+                <div class="title2">
+                    <div class="title2-anime">
+                        <div class="title2-anime-obj">服務案例</div>
                     </div>
                 </div>
-                <div class="certificate1">
-                    <div class="certificate1-anime">
-                        <img :src="require('@/static/image/pc/aboutUs/certificate1.png')" alt="">
-                    </div>
-                </div>
-                <div class="subTitle2">
-                    <div class="subTitle2-anime">
-                        <p class="subTitle2-anime-obj">寶輇車業專利證書</p>
-                    </div>
-                </div>
-                <div class="certificate2">
-                    <div class="certificate2-anime">
-                        <img :src="require('@/static/image/pc/aboutUs/certificate2.png')" alt="">
+                <div class="exampleCard">
+                    <div class="exampleCardWrap">
+                        <div class="exampleImg">
+                            <div class="exampleImg-anime">
+                                <img :src="require('@/static/image/pc/service/exampleImage.png')" alt="">
+                            </div>
+                        </div>
+                        <div class="exampleTxt">
+                            <div class="exampleTxtTitle">藍寶堅尼保養後協助拖運</div>
+                            <div class="exampleTxtDes">寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。</div>
+                        </div>
                     </div>
                 </div>
                 <div class="height"></div>
@@ -190,7 +124,7 @@ export default {
             ],
             teamList:[
                 {
-                    name: '總經理-吳宗達',
+                    name: '總經理 -吳宗達',
                     enName: 'CEO-ZONG DA WU',
                     des: '寶輇團隊隊長，多年駕駛多款跑車經驗，了解頂級客群對於車輛託運的需求與擔心，擁有職業大貨車駕照及多次跑車運載經驗。',
                     img: require('@/static/image/pc/aboutUs/person1.png')
@@ -203,13 +137,13 @@ export default {
                 },
                 {
                     name: '運輸工程師-簡上捷',
-                    enName: 'Transportation Engineer-SHANG JIE JIAN',
+                    enName: 'Transportation Engineer- SHANG JIE JIAN',
                     des: '個性警慎，謹守紀律的特質，持有合格職業大貨車駕照，並擁有3年以上大貨車跑車、豪車託運豐富經驗。',
                     img: require('@/static/image/pc/aboutUs/person3.png')
                 },
                 {
                     name: '運輸工程師-游健勳',
-                    enName: 'Transportation Engineer-YOU JIANXUN',
+                    enName: 'Transportation Engineer- YOU JIANXUN',
                     des: '個性務實，謹守紀律的特質，持有合格職業大貨車駕照，並擁有6年以上大貨車跑車、豪車託運豐富經驗。',
                     img: require('@/static/image/pc/aboutUs/person4.png')
                 },
@@ -235,17 +169,17 @@ export default {
             },
         }
     },
-    mounted(){
-        window.aboutUsAnime()
-    },
-    methods:{
-        scrollTo(className) {
-            const scrollEl = document.getElementsByClassName(className)[0];
-            window.scrollTo({
-                top: scrollEl.offsetTop,
-                behavior: "smooth"
-            });
-        }
-    }
+    // mounted(){
+    //     window.aboutUsAnime()
+    // },
+    // methods:{
+    //     scrollTo(className) {
+    //         const scrollEl = document.getElementsByClassName(className)[0];
+    //         window.scrollTo({
+    //             top: scrollEl.offsetTop,
+    //             behavior: "smooth"
+    //         });
+    //     }
+    // }
 }
 </script>
