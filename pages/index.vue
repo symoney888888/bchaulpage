@@ -214,9 +214,11 @@
                         </div>
                     </div>
                     <div class="readmore">
-                        <div class="readmore-anime">
-                            <div class="readmore-anime-obj"></div>
-                        </div>
+                        <a href="/news">
+                            <div class="readmore-anime">
+                                <div class="readmore-anime-obj"></div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -292,51 +294,65 @@ export default {
                 {
                     title: '寶輇車業 試營運！',
                     des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg1.png'),
-                    date: '2023.08.03',
-                    url: '/',
+                    image: require('@/static/image/pc/news/news1.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
                 {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg2.png'),
-                    date: '2023.08.03',
-                    url: '/aboutUs',
+                    title: '汽車品牌託運合作特約活動',
+                    des: '汽車品牌與託運服務業者攜手合作提供更尊榮的服務，為汽車品牌專屬優惠和合作方案，促進彼此間的合作關係。',
+                    image: require('@/static/image/pc/news/news2.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
                 {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg1.png'),
-                    date: '2023.08.03',
-                    url: '/',
+                    title: '車隊託運合作特約簽訂活動',
+                    des: '特定車隊與託運業者達成合作協議，提供定制合同條款和優惠價格，深化雙方間的夥伴關係。',
+                    image: require('@/static/image/pc/news/news3.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
                 {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg2.png'),
-                    date: '2023.08.03',
-                    url: '/aboutUs',
+                    title: '車商託運合作特約合作計畫',
+                    des: '車商和託運業者合作，共同制定行銷策略和協作計劃，實現雙贏的商機。',
+                    image: require('@/static/image/pc/news/news4.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
                 {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg1.png'),
-                    date: '2023.08.03',
-                    url: '/',
+                    title: 'VIP頂級客戶會員儲值託運方案活動',
+                    des: '專為VIP頂級客戶設計的會員儲值託運方案，提供獨家儲值優惠和高級託運服務，提升客戶滿意度。',
+                    image: require('@/static/image/pc/news/news5.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
                 {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/main/newsImg2.png'),
-                    date: '2023.08.03',
-                    url: '/',
+                    title: '試營運託運合作限時活動',
+                    des: '新車型或服務推出前的試營運託運合作活動，讓消費者首先體驗特別價格或專屬服務。',
+                    image: require('@/static/image/pc/news/news6.png'),
+                    date: '2023.08.10',
+                    url: '/news',
+                },
+                {
+                    title: '品牌車廂行銷廣告活動合作',
+                    des: '品牌和託運業者合作，透過車廂行銷廣告活動，提升品牌知名度和市場影響力。',
+                    image: require('@/static/image/pc/news/news7.png'),
+                    date: '2023.08.10',
+                    url: '/news',
+                },
+                {
+                    title: '新款車輛機密運送合作',
+                    des: '車商和託運業者合作，共同制定行銷策略和協作計劃，實現雙贏的商機。',
+                    image: require('@/static/image/pc/news/news8.png'),
+                    date: '2023.08.10',
+                    url: '/news',
                 },
             ],
             visionUrl:[
                 {url:'/model'},
                 {url:'/news'},
                 {url:'/model'},
-                {url:'news'}
+                {url:'/news'}
             ],
             swiperOption: {
                 autoplay: 2000,
