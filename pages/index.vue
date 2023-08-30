@@ -40,9 +40,11 @@
                     </div>
                 </div>
                 <div class="readmore">
-                    <div class="readmore-anime">
-                        <div class="readmore-anime-obj"></div>
-                    </div>
+                    <a href="/aboutUs">
+                        <div class="readmore-anime">
+                            <div class="readmore-anime-obj"></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="reserve">
                     <a href="/">
