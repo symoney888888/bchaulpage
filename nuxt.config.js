@@ -23,7 +23,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/image/pc/main/shareImg.png',
+        content: '@/static/image/pc/main/shareImg.png',
       },
     ],
     link: [
