@@ -34,13 +34,15 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/index.scss',
-    'swiper/swiper-bundle.css'
+    'swiper/swiper-bundle.css',
+    '@/assets/css/swiper-bundle.min'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: "~/plugins/vue-swiper.js", ssr: false },
     { src: '~/plugins/index/bannerAnime', mode: 'client' },
+    { src: '~/plugins/swiper-bundle.min', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

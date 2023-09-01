@@ -22,7 +22,7 @@
                     <a href="/news">
                         <div class="toNews navItem">最新消息</div>
                     </a>
-                    <a href="">
+                    <a href="/service">
                         <div class="toService navItem">服務項目</div>
                     </a>
                     <a href="">
