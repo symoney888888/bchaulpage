@@ -25,7 +25,7 @@
                     <a href="/service">
                         <div class="toService navItem">服務項目</div>
                     </a>
-                    <a href="">
+                    <a href="/contactUs">
                         <div class="toContact navItem">聯絡我們</div>
                     </a>
                     <div class="socialBtnBox">
