@@ -31,17 +31,17 @@
                             <hr class="greenLine" />
                             <hr class="grayLine" />
                         </div>
-                        <form class="formContain">
+                        <form class="formContain" @submit.prevent="sendForm" >
                             <div class="formRow">
                                 <div class="formTitle">客戶資訊</div>
                                 <div class="formTitle">車輛資訊</div>
                             </div>
                             <div class="formRow">
-                                <div class="formItem"><span>公司/姓名：</span><input v-model="formData.name" type="text" maxlength="8" required="required" /></div>
+                                <div class="formItem required"><span>公司/姓名：</span><input v-model="formData.name" type="text" maxlength="8" required="required" /></div>
                                 <div class="formItem"><span>車牌號碼：</span><input v-model="formData.car_plate_number" /></div>
                             </div>
                             <div class="formRow">
-                                <div class="formItem"><span>聯繫電話：</span><input v-model="formData.phone" type="tel"  required="required" /></div>
+                                <div class="formItem required"><span>聯繫電話：</span><input v-model="formData.phone" type="tel" required="required" /></div>
                                 <div class="formItem">
                                     <span>車輛品牌：</span>
                                     <select name="brand" class="brand" v-model="formData.car_brand">
@@ -51,13 +51,11 @@
                                 </div>
                             </div>
                             <div class="formRow">
-                                <div class="formItem"><span>電子信箱：</span><input type="email" pattern=".+@globex\.com"  v-model="formData.email" /></div>
-                                <div class="formItem">
-                                    <span>車輛型號：</span><input v-model="formData.car_camry" />
-                                </div>
+                                <div class="formItem"><span>電子信箱：</span><input type="email" pattern=".+@globex\.com" v-model="formData.email" /></div>
+                                <div class="formItem"><span>車輛型號：</span><input v-model="formData.car_camry" /></div>
                             </div>
                             <div class="formRow">
-                                <div class="formItem"><span>地址：</span><input v-model="formData.name_address"  type="text" /></div>
+                                <div class="formItem"><span>地址：</span><input v-model="formData.name_address" type="text" /></div>
                                 <div class="formItem">
                                     <span>車輛顏色：</span>
                                     <select name="color" class="color" v-model="formData.car_color">
@@ -75,14 +73,14 @@
                                 <div class="formItem"><span>起運時間：</span><input type="time" v-model="formData.departure" /></div>
                             </div>
                             <div class="formRow">
-                                <div class="formItem"><span>起運地址：</span><input  type="text" v-model="formData.departure_address" /></div>
-                                <div class="formItem"><span>目的地地址：</span><input  type="text" v-model="formData.destination_address" /></div>
+                                <div class="formItem"><span>起運地址：</span><input type="text" v-model="formData.departure_address" /></div>
+                                <div class="formItem"><span>目的地地址：</span><input type="text" v-model="formData.destination_address" /></div>
                             </div>
                             <div class="formRow">
                                 <div class="formItem formDesItem"><span>特殊需求或注意事項：</span><textarea v-model="formData.memo" rows="" cols=""></textarea></div>
                             </div>
                             <div class="submitBtn">
-                                <input class="submitBtn-anime" type="submit" value="" @click="sendForm()" />
+                                <button  class="submitBtn-anime" type="submit" value="" ></button>
                             </div>
                         </form>
                     </div>
@@ -123,7 +121,7 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -172,25 +170,28 @@ export default {
     },
     methods: {
         async getRecaptchaToken() {
-            await this.$recaptchaLoaded();
-            const token = await this.$recaptcha('contactUs');
-                return token;
+            await this.$recaptchaLoaded()
+            const token = await this.$recaptcha('contactUs')
+            return token
         },
         sendForm() {
             const self = this
-            if(self.getRecaptchaToken()){
+            if (self.getRecaptchaToken()) {
                 const sendData = axios
-                .post('https://bchaul.aeff.xyz/api/car.Reservation/add', self.formData, { header: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*' } })
-                .then(function (response) {
-                    console.log(response)
-                    alert('表單提交成功!')
-                })
-                .catch(function (error) {
-                    console.log('錯誤', error)
-                    alert('表單提交失敗 請稍後再試!')
-                })
+                    .post('https://bchaul.aeff.xyz/api/car.Reservation/add', self.formData, {
+                        header: { 'Content-Type': 'application/json',"Access-Control-Allow-Origin": true, 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',"Access-Control-Max-Age": "3600",'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',"Access-Control-Allow-Credentials": "true" },
+                    })
+                    .then(function (response) {
+                        console.log(response)
+                        alert('表單提交成功!')
+                    })
+                    .catch(function (error) {
+                        console.log('錯誤', error)
+                        if (self.formData.name && self.formData.phone) {
+                            alert('表單提交失敗 請稍後再試!')
+                        }
+                    })
                 console.log(sendData)
-                
             }
         },
     },
