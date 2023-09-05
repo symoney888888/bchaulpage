@@ -4299,10 +4299,10 @@ body {
         .title1 {
             &-anime {
                 position: absolute;
-                $w: 476.9px;
-                $h: 58.6px;
-                left: #{math.div(211.8px, $boxWidth_pc) * 100%};
-                top: #{math.div(37px, $boxHeight_pc) * 100%};
+                $w: 188.9px;
+                $h: 53px;
+                left: #{math.div(218px, $boxWidth_pc) * 100%};
+                top: #{math.div(46px, $boxHeight_pc) * 100%};
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
                 @include mob-width {
                     $w: 148px;
@@ -4320,7 +4320,7 @@ body {
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-image: url('~/static/image/pc/main/bc-haul-png.png');
+                    background-image: url('~/static/image/pc/service/q-a.png');
                 }
             }
         }
@@ -4360,6 +4360,7 @@ body {
                 position: relative;
                 padding: 2vw 0;
                 border-bottom: 2px solid #fff;
+                cursor: pointer;
                 .infoTitleContain{
                     color:#fff;
                     font-size: 2.23vw;
@@ -4668,15 +4669,20 @@ body {
                 }
             }
             .submitBtn{
+                margin-top: 1.6vw;
                 display: flex;
                 justify-content: center;
                 &-anime{
+                    cursor: pointer;
+                    border: none;
                     position: relative;
-                    margin-top: 1.6vw;
                     width: 11.1vw;
-                    img{
-                        display: block;
-                        width: 100%;
+                    height: 3.23vw;
+                    background: url('~/static/image/pc/contact/submit.png') no-repeat;
+                    background-size: 100%;
+                    transition: 0.2s all ease;
+                    &:hover{
+                        transform: translateY(-5px);
                     }
                 }
             }
