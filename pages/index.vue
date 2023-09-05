@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="reserve">
-                    <a href="/">
+                    <a href="/contactUs">
                         <div class="reserve-anime">
                             <div class="reserve-anime-obj"></div>
                         </div>
@@ -163,9 +163,11 @@
                     </div>
                 </div>
                 <div class="readmore">
-                    <div class="readmore-anime">
-                        <div class="readmore-anime-obj"></div>
-                    </div>
+                    <a href="/service">
+                        <div class="readmore-anime">
+                            <div class="readmore-anime-obj"></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="height"></div>
             </section>
@@ -347,8 +349,8 @@ export default {
             visionUrl:[
                 {url:'/model'},
                 {url:'/news'},
-                {url:'/model'},
-                {url:'/news'}
+                {url:'/service'},
+                {url:'/contactUs'}
             ],
             swiperOption: {
                 autoplay: 2000,

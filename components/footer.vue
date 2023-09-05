@@ -2,7 +2,7 @@
     <div id="footer">
         <section class="contactUs">
             <div class="bgIcon">
-                <div class="bgIcon-anime">
+                <div class="bgIcon-anime"  @click="scrollTo('banner')">
                     <div class="bgIcon-anime-obj"></div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
             </div>
             <p class="des">點選下方按鈕，填選google表單，提供預約<br class='mbBr' />資訊與時間將為您提供專業拖吊諮詢，<br class='mbBr' />歡迎與我們聯絡!</p>
             <div class="reserveBtn">
-                <a href="">
+                <a href="/contactUs">
                     <div class="reserveBtn-anime">
                         <div class="reserveBtn-anime-obj"></div>
                     </div>
@@ -77,3 +77,16 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        scrollTo(className) {
+            const scrollEl = document.getElementsByClassName(className)[0];
+            window.scrollTo({
+                top: scrollEl.offsetTop,
+                behavior: "smooth",
+            });
+        },
+    }
+}
+</script>

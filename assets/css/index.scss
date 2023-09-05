@@ -122,6 +122,11 @@ body {
                 width: 10.52vw;
                 height: 10.52vw;
                 margin-top: 5.1vw;
+                transition: 0.1s linear;
+                cursor: pointer;
+                &:hover{
+                    transform: translateY(-5px)  scale(1.05);
+                }
                 @include mob-width {
                     display: none;
                 }
@@ -4167,6 +4172,7 @@ body {
                     opacity: 0.6;
                     display: flex;
                     justify-content: center;
+                    cursor: pointer;
                     .sliderWrap{
                         .sliderImg{
                             width: 100%;

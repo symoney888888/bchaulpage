@@ -22,13 +22,13 @@
                 <div class="navBtn">
                     <div class="navBtnWrap">
                         <div class="navBtnAnime">
-                            <span @click="scrollTo('vision')">頂級車輛托運</span>
+                            <span @click="scrollTo('serviceList')">頂級車輛托運</span>
                         </div>
                         <div class="navBtnAnime">
-                            <span @click="scrollTo('ourTeam')">服務案例</span>
+                            <span @click="scrollTo('case')">服務案例</span>
                         </div>
                         <div class="navBtnAnime">
-                            <span @click="scrollTo('legalTeam')">常見問題</span>
+                            <span @click="scrollTo('QAList')">常見問題</span>
                         </div>
                     </div>
                 </div>
@@ -431,7 +431,7 @@ export default {
     },
     mounted() {
         const self = this;
-        //window.aboutUsAnime()
+        window.serviceAnime()
         
         this.$nextTick(() => {
             const swiperTop = this.$refs.swiperTop.swiper
