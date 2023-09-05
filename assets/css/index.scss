@@ -4433,7 +4433,7 @@ body {
         width: 100%;
         position: relative;
         $boxWidth_pc: 1920px;
-        $boxHeight_pc: 1100px;
+        $boxHeight_pc: 963px;
         background-repeat: no-repeat;
         background-image: url('~/static/image/pc/contact/contactUsBg.png');
         background-size: 100%;
@@ -4535,7 +4535,7 @@ body {
         }
     }
     .form{
-        margin-top: 79px;
+        margin-top: 4.8vw;
         margin-bottom: 100px;
         .wrap{
             width: 86.4%;
@@ -4546,10 +4546,28 @@ body {
         .formArea{
             width: 63.4%;
             .bgImg{
-                &-anime{
-                    &-obj{
-
-                    }
+                width: 26vw;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .titleLine{
+                margin-top: 1.46vw;
+                margin-bottom: 1.8vw;
+                width: 100%;
+                height: 2px;
+                display: flex;
+                //border-width: 1px;
+                border-style: solid;
+                .greenLine{
+                    width: 5vw;
+                    border-color: #b4ff00;
+                    color: #b4ff00;
+                }
+                .grayLine{
+                    border-color: #a1a1a1;
+                    flex-grow: 1;
                 }
             }
             .formContain{
@@ -4579,9 +4597,10 @@ body {
                         input{
                             width: 100%;
                             font-size: 1.25vw;
+                            color-scheme: dark;
                             background-color: rgba(0, 0, 0, 0);
-                            border-color: #fff;
-                            color: #fff;
+                            border-color: #979797;
+                            //color: #fff;
                             border-radius: 9px;
                             padding: 0.9vw 0.78vw;
                             padding-left: 8vw;
@@ -4595,6 +4614,34 @@ body {
                                 outline: 0;
                             }
                         }
+                        select{
+                            width: 100%;
+                            font-size: 1.25vw;
+                            background-color: rgba(0, 0, 0, 0);
+                            border-color: #979797;
+                            color: #fff;
+                            border-radius: 9px;
+                            padding: 0.9vw 0.78vw;
+                            padding-left: 8vw;
+                            box-sizing: border-box;
+                            &:hover{
+                                border-color: #b4ff00;
+                            }
+                            &:focus{
+                                border-color: #b4ff00;
+                                background-color: #000;
+                                //color: #fff;
+                                outline: 0;
+                            }
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                color: #a0df66;
+                            }
+                        }
+                        
                     }
                     .formDesItem{
                         width: 100%;
@@ -4637,6 +4684,74 @@ body {
         .mapArea{
             padding-left: 3%;
             width: 36.6%;
+            .map{
+                width: 30.41vw;
+                height: 28.5vw;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .info{
+                margin-top: 1.6vw;
+                .title{
+                    width: 20vw;
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .detailBox{
+                    margin-top: 3vw;
+                    .detial{
+                        margin-bottom: 1.6vw;
+                        .icon{
+                            font-size: 1.5vw;
+                            font-weight: 800;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: 0.34vw;
+                            color: #b4ff00;
+                        }
+                        .des{
+                            font-size: 1.25vw;
+                            font-weight: 500;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: 0.3vw;
+                            color: #fff;
+                        }
+                    }
+                }
+                .qrBox{
+                    margin-top: -2.5vw;
+                    margin-left: 3.6vw;
+                    display: flex;
+                    align-items: end;
+                    .desArea{
+                        p{
+                            margin: 0.6vw 0;
+                            font-size: 1.2vw;
+                            font-weight: 500;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: 0.3vw;
+                            color: #fff;
+                        }
+                    }
+                    .qrArea{
+                        padding-left: 0.5vw;
+                        width: 8.23vw;
+                        img{
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }            
+            }
         }
     }
 }
