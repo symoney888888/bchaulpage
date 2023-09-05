@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="reserve">
-            <a href="/">
+            <a href="/contactUs">
                 <div class="reserve-anime">
                     <div class="reserve-anime-obj"></div>
                 </div>

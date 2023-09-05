@@ -88,7 +88,7 @@
                         </div>
                         <div class="submitBtn">
                             <a href="javascript:void(0);">
-                                <div class="submitBtn-anime" @click="sendForm()">
+                                <div class="submitBtn-anime"  @click="sendForm()">
                                     <img :src="require('@/static/image/pc/contact/submit.png')" alt="" />
                                 </div>
                             </a>
@@ -179,9 +179,28 @@ export default {
         }
     },
     methods: {
-        sendForm() {
+        async getRecaptchaToken() {
+            await this.$recaptchaLoaded();
+            const token = await this.$recaptcha('contactUs');
+                return token;
+        },
+        // async verify() {
+        // axios({
+        //     method: 'POST',
+        //     url: '/auth/verify',
+        //     data: {
+        //     token: await this.getRecaptchaToken(),
+        //     },
+        // })
+        //     .then(() => {
+        //         // ...
+        //     });
+        // },
+        async sendForm() {
             const self = this
-            const sendData = axios
+            alert(self.getRecaptchaToken())
+            if(self.getRecaptchaToken()){
+                const sendData = axios
                 .post('https://bchaul.aeff.xyz/api/car.Reservation/add', self.formData, { header: { 'Content-Type': 'application/json' } })
                 .then(function (response) {
                     console.log(response)
@@ -189,7 +208,10 @@ export default {
                 .catch(function (error) {
                     console.log('錯誤', error)
                 })
-            alert('sendData', sendData)
+                alert('sendData', sendData)
+            }
+            
+            
         },
     },
 }
