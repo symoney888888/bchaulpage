@@ -184,21 +184,8 @@ export default {
             const token = await this.$recaptcha('contactUs');
                 return token;
         },
-        // async verify() {
-        // axios({
-        //     method: 'POST',
-        //     url: '/auth/verify',
-        //     data: {
-        //     token: await this.getRecaptchaToken(),
-        //     },
-        // })
-        //     .then(() => {
-        //         // ...
-        //     });
-        // },
-        async sendForm() {
+        sendForm() {
             const self = this
-            alert(self.getRecaptchaToken())
             if(self.getRecaptchaToken()){
                 const sendData = axios
                 .post('https://bchaul.aeff.xyz/api/car.Reservation/add', self.formData, { header: { 'Content-Type': 'application/json' } })
@@ -208,7 +195,6 @@ export default {
                 .catch(function (error) {
                     console.log('錯誤', error)
                 })
-                alert('sendData', sendData)
             }
             
             
