@@ -168,6 +168,9 @@ export default {
             car_color: ['紅', '橙', '黃', '綠', '藍', '紫', '黑', '白', '灰', '其他'],
         }
     },
+    mounted(){
+        window.contactAnime()
+    },
     methods: {
         async getRecaptchaToken() {
             await this.$recaptchaLoaded()

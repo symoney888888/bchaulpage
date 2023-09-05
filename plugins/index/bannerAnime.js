@@ -35,7 +35,6 @@ if (process.client) {
         var subbarEl = bannerBox.querySelector('.subbar-anime')
         var subtitleEl = bannerBox.querySelector('.subtitle-anime')
         var readmoreEl = bannerBox.querySelector('.readmore-anime')
-
         const tl = gsap.timeline({})
         tl.from(titleEl, {
             ease: 'CustomEase.create("custom",".14,.49,.42,1")',
@@ -318,6 +317,26 @@ if (process.client) {
     }
     window.serviceAnime = function() {
       var main = document.querySelector('#servicePage')
+      var bannerBox = main.querySelector('.banner')
+      var el1Anime = bannerBox.querySelectorAll('.title-anime')
+      var el2Anime = bannerBox.querySelectorAll('.subTitle-anime')
+      const tl = gsap.timeline({})
+      tl.from(
+        [el1Anime,el2Anime],
+        {
+          ease: 'ease',
+          y: 300,
+          opacity:0,
+          scale:0,
+          delay:0.2,
+          duration:0.3,
+          stagger: 0.2,
+          onComplete:window.rightBarAnime(0.3)
+        },
+      )
+    }
+    window.contactAnime = function() {
+      var main = document.querySelector('#contactPage')
       var bannerBox = main.querySelector('.banner')
       var el1Anime = bannerBox.querySelectorAll('.title-anime')
       var el2Anime = bannerBox.querySelectorAll('.subTitle-anime')

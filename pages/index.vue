@@ -380,8 +380,15 @@ export default {
         }
     },
     mounted() {
+        const self = this
         this.isDevice()
-        window.bannerAnime()
+        document.body.style.overflow = 'hidden'
+        self.$nextTick(function () {
+            var openAnimeTL = window.bannerAnime()
+            openAnimeTL.play().then(() => {
+                document.body.style.overflow = ''
+            })
+        })
         window.scrollAnime(this.isMobile)
         addEventListener('resize',()=>{
             this.isDevice()
