@@ -8,7 +8,7 @@
                 </div>
                 <!-- <div class="navBG"></div> -->
                 <div class="navList">
-                    <a href="">
+                    <a href="/">
                         <div class="navLogo">
                             <img :src="require('@/static/image/pc/main/logo-img.png')" alt="" />
                         </div>

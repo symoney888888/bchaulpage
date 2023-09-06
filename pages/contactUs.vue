@@ -195,9 +195,9 @@ export default {
                     })
                     .catch(function (error) {
                         console.log('錯誤', error)
-                        // if (self.formData.name && self.formData.phone) {
-                        //     alert('表單提交失敗 請稍後再試!')
-                        // }
+                        if (self.formData.name && self.formData.phone) {
+                            alert('表單提交失敗 請稍後再試!')
+                        }
                     })
                 console.log(sendData)
             }

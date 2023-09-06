@@ -58,6 +58,10 @@
                             愛車提供無與倫比的服務。讓我們攜手，為您的愛車開啟尊榮、<br />
                             安心的運載新紀元。<br />
                         </div>
+                        <div class="desContain_mb">
+                            寶輇車業於2022年成立，源於對跑車的熱愛與對精緻汽車的珍愛之情。我們為您提供獨一無二的頂級透明箱型運載服務，堅守著對愛車的無微不至守護。透過創新的全卸斗方式，我們謹慎地處理各式超低底盤頂級車輛，確保在運輸過程中給予愛車最完美的呵護。<br />
+                            我們的服務不僅僅是運載，更是一種愛車的守護。無論是滿足行銷需求的特殊配備，抑或是客戶隱私的極致保護，我們都能夠完美呈現。結合先進的科技定位系統，您隨時能夠了解愛車的運輸狀況，始終與愛車心靈相通。我們堅信，我們的服務能夠比您更加珍視您驕傲的愛車。寶輇車業不僅僅是運載的媒介，更是您愛車的信任代表，我們的驕傲源於能夠為您的愛車提供無與倫比的服務。讓我們攜手，為您的愛車開啟尊榮、安心的運載新紀元。
+                        </div>
                         <div class="title2">經營理念</div>
                         <ul>
                             <li>為頂級的客戶 提供頂級愛車的運輸服務，為我們的核心。</li>
@@ -67,7 +71,6 @@
                             <li>為服務您驕傲的愛車 是我們最大的驕傲。</li>
                         </ul>
                     </div>
-                    
                 </div>
                 <div class="height"></div>
             </section>
@@ -142,6 +145,7 @@
                             <div class="swiper-button-prev" slot="button-prev"></div>
                             <div class="swiper-button-next" slot="button-next"></div>
                         </swiper>
+                        <div class="swiper-pagination" slot="button-pagination"></div>
                     </div>
                 </div>
 
@@ -243,6 +247,9 @@ export default {
                     },
                     768: {
                         slidesPerView: 1,
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
                     },
                 },
                 navigation: {

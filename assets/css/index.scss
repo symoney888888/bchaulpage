@@ -13,6 +13,7 @@ body {
 }
 
 #header {
+    overflow-x: hidden;
     top: 0;
     z-index: 5;
     position: absolute;
@@ -37,11 +38,11 @@ body {
             left: #{math.div(60px, $headerWidth_pc) * 100%};
             top: #{math.div(50px, $headerHeight_pc) * 100%};
             @include mob-width {
-                $w: 92px;
-                $h: 49px;
+                $w: 73.2px;
+                $h: 38px;
                 @include getImgBoxSize($w, $h, $headerWidth_mb);
-                left: #{math.div(139px, $headerWidth_mb) * 100%};
-                top: #{math.div(23px, $headerHeight_mb) * 100%};
+                left: #{math.div(20.8px, $headerWidth_mb) * 100%};
+                top: #{math.div(15px, $headerHeight_mb) * 100%};
             }
             &-obj {
                 position: absolute;
@@ -96,7 +97,7 @@ body {
                 $h: 22px;
                 @include getImgBoxSize($w, $h, $headerWidth_mb);
                 left: #{math.div(334px, $headerWidth_mb) * 100%};
-                top: #{math.div(36px, $headerHeight_mb) * 100%};
+                top: #{math.div(20px, $headerHeight_mb) * 100%};
             }
             &-obj {
                 position: absolute;
@@ -113,6 +114,7 @@ body {
     }
 }
 #footer{
+    overflow-x: hidden;
     .contactUs{
         .bgIcon{
             display: flex;
@@ -688,7 +690,7 @@ body {
                         @include mob-width {
                             width: 5.86vw;
                             height: 34.6vw;
-                            //margin-top: 5vw;
+                            display: none;
                         }
                     }
                     &-obj {
@@ -734,9 +736,9 @@ body {
     }
 }
 #main{
+    overflow-x: hidden;
     background-color: #000000;
     .container {
-        overflow-x: hidden;
         .banner {
             width: 100%;
             position: relative;
@@ -2907,19 +2909,30 @@ body {
     }
 }
 #aboutUsPage{
+    overflow-x: hidden;
     .banner{
         width: 100%;
         position: relative;
         $boxWidth_pc: 1920px;
         $boxHeight_pc: 1100px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 409px;
         background: url('~/static/image/pc/aboutUs/aboutUsBg.png') no-repeat;
         background-size: 100%;
+        @include mob-width{
+            background: url('~/static/image/mb/aboutUs/aboutUsBg.png') no-repeat;
+            background-size: 100%;
+        }
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgImg{
             &-anime{
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 &-obj{
@@ -2932,6 +2945,10 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-image: url('~/static/image/pc/main/aboutUsBg2.png');
+                    @include mob-width {
+                        background-image: url('~/static/image/mb/aboutUs/bgBlur.png');
+                        background-size: 100%;
+                    }
                 }
             }
         }
@@ -2941,6 +2958,9 @@ body {
             &-anime {
                 position: absolute;
                 top: #{math.div(452px, $boxHeight_pc) * 100%};
+                @include mob-width {
+                    top: #{math.div(156px, $boxHeight_mb) * 100%};
+                }
                 &-obj {
                     font-size: 4.58vw;
                     font-weight: 900;
@@ -2949,6 +2969,10 @@ body {
                     line-height: normal;
                     letter-spacing: 0.6vw;
                     color: #ffffff;
+                    @include mob-width {
+                        font-size: 8vw;
+                        letter-spacing: 1vw;
+                    }
                 }
             }
         }
@@ -2958,6 +2982,9 @@ body {
             &-anime {
                 position: absolute;
                 top: #{math.div(611px, $boxHeight_pc) * 100%};
+                @include mob-width {
+                    top: #{math.div(203px, $boxHeight_mb) * 100%};
+                }
                 &-obj {
                     font-size: 2.4vw;
                     font-weight: 600;
@@ -2966,6 +2993,10 @@ body {
                     line-height: normal;
                     letter-spacing: 0.9vw;
                     color: #ffffff;
+                    @include mob-width {
+                        font-size: 4.3vw;
+                        letter-spacing: 1vw;
+                    }
                 }
             }
         }
@@ -2982,6 +3013,9 @@ body {
                 word-wrap: normal;
                 width: 60%;
                 margin: auto;
+                @include mob-width {
+                    width: 90%;
+                }
                     .navBtnAnime{
                         text-align: center;
                         position: relative;
@@ -3017,11 +3051,20 @@ body {
         position: relative;
         $boxWidth_pc: 1920px;
         $boxHeight_pc: 1683px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 667px;
         background: url('~/static/image/pc/aboutUs/visionBg.png') no-repeat;
         background-size: 100%;
+        @include mob-width {
+            background: url('~/static/image/mb/aboutUs/vision.png') no-repeat;
+            background-size: 100%;
+        }
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgIcon{
             @for $i from 1 through 2 {
@@ -3036,6 +3079,11 @@ body {
                             $h: 161px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
+                                left: #{math.div(257px, $boxWidth_mb) * 100%};
+                                top: #{math.div(83px, $boxHeight_mb) * 100%};
+                                $w: 35px;
+                                $h: 35px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 2 {
                             transform-origin: right;
@@ -3082,11 +3130,10 @@ body {
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
                 top: #{math.div(191px, $boxHeight_pc) * 100%};
                 @include mob-width {
-                    // $w: 204px;
-                    // $h: 89px;
-                    // @include getImgBoxSize($w, $h, $boxWidth_mb);
-                    // left: #{math.div(85px, $boxWidth_mb) * 100%};
-                    // top: #{math.div(0px, $boxHeight_mb) * 100%};
+                    top: #{math.div(43px, $boxHeight_mb) * 100%};
+                    $w: 161px;
+                    $h: 24px;
+                    @include getImgBoxSize($w, $h, $boxWidth_mb);
                 }
                 &-obj {
                     position: absolute;
@@ -3098,9 +3145,9 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-image: url('~/static/image/pc/aboutUs/our-vision-png.png');
-                    @include mob-width {
-                        background-image: url('~/static/image/mb/mbVisionTitle.png');
-                    }
+                    // @include mob-width {
+                    //     background-image: url('~/static/image/mb/mbVisionTitle.png');
+                    // }
                 }
             }
         }
@@ -3117,15 +3164,30 @@ body {
             color: #fff;
             font-family: SourceHanSansTW;
             @include mob-width {
-                display: none;                
+                top: #{math.div(87px, $boxHeight_mb) * 100%};  
+                font-size: 3.2vw;    
+                letter-spacing: 0.45vw;  
             }
             .desContain{
+                display: block;
                 line-height: 1.67;
                 margin-top: 1.4vw;
+                @include mob-width{
+                    display: none;
+                }
+            }
+            .desContain_mb{
+                display: none;
+                @include mob-width {
+                    display: block;
+                    margin-top: 2.9vw;
+                    line-height: 1.83;
+                    padding: 0 10%;
+                }
             }
             .title{
                 margin-top: 0;
-                font-size: 2.4vw;
+                font-size: 4.8vw;
                 font-weight: bold;
                 font-stretch: normal;
                 font-style: normal;
@@ -3133,8 +3195,8 @@ body {
                 letter-spacing: 0.6vw;
             }
             .title2{
-                margin-top: 6.67vw;
-                font-size: 2.4vw;
+                margin-top: 7vw;
+                font-size: 4.8vw;
                 font-weight: bold;
                 font-stretch: normal;
                 font-style: normal;
@@ -3142,11 +3204,18 @@ body {
                 letter-spacing: 0.6vw;
             }
             ul{
-                margin-top: 2.24vw;
+                margin-top: 2.9vw;
+                // @include mob-width {
+                //     text-align:start;
+                // }
                 li{
-                    text-align: start;
                     line-height: 1.81;
                     letter-spacing: 0.5vw;
+                    @include mob-width {
+                        line-height: 1.83;
+                        padding: 0 12%;
+                        letter-spacing: 0.78vw;  
+                    }
                 }
             }
         }
@@ -3157,10 +3226,15 @@ body {
         position: relative;
         $boxWidth_pc: 1920px;
         $boxHeight_pc: 840px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 993px;
         background-size: 100%;
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgIcon{
             @for $i from 1 through 2 {
@@ -3175,6 +3249,11 @@ body {
                             $h: 690px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
+                                right: #{math.div(-59px, $boxWidth_mb) * 100%};
+                                top: #{math.div(711px, $boxHeight_mb) * 100%};
+                                $w: 163px;
+                                $h: 248px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 2 {
                             transform-origin: right;
@@ -3185,7 +3264,11 @@ body {
                             opacity: 0.4;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
-                                display: none;
+                                left: #{math.div(-59px, $boxWidth_mb) * 100%};
+                                top: #{math.div(-49px, $boxHeight_mb) * 100%};
+                                $w: 143px;
+                                $h: 217px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         }
                         &-obj {
@@ -3221,11 +3304,12 @@ body {
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
                 top: #{math.div(0px, $boxHeight_pc) * 100%};
                 @include mob-width {
-                    // $w: 204px;
-                    // $h: 89px;
-                    // @include getImgBoxSize($w, $h, $boxWidth_mb);
-                    // left: #{math.div(85px, $boxWidth_mb) * 100%};
-                    // top: #{math.div(0px, $boxHeight_mb) * 100%};
+                    @include mob-width {
+                        top: #{math.div(0px, $boxHeight_mb) * 100%};
+                        $w: 117px;
+                        $h: 15px;
+                        @include getImgBoxSize($w, $h, $boxWidth_mb);
+                    }
                 }
                 &-obj {
                     position: absolute;
@@ -3237,9 +3321,6 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-image: url('~/static/image/pc/aboutUs/serviceTitle.png');
-                    @include mob-width {
-                        background-image: url('~/static/image/mb/mbVisionTitle.png');
-                    }
                 }
             }
         }
@@ -3251,6 +3332,10 @@ body {
                 position: absolute;
                 display: flex;
                 justify-content: center;
+                @include mob-width {
+                    flex-direction: column ;
+                    top: #{math.div(47px, $boxHeight_pc) * 100%};
+                }
                 @for $i from 1 through 3 {
                     .serviceBtn__#{$i} {
                         &-anime {
@@ -3259,10 +3344,12 @@ body {
                             margin-left: 2.34vw;
                             width: 25vw;
                             height: 21vw;
-                            // position: absolute;
-                            // $w: 479px;
-                            // $h: 412px;
-                            // @include getImgBoxSize($w, $h, $boxWidth_pc);
+                            @include mob-width {
+                                width: 87.2vw;
+                                height: 75vw;
+                                margin-left: 0;
+                                margin-bottom: 5.3vw;
+                            }
                             @if $i == 1 {
                             } @else if $i == 2 {
                             }
@@ -3308,12 +3395,18 @@ body {
                                     display: flex;
                                     align-items: end;
                                     padding:0 1.77vw;
+                                    @include mob-width {
+                                        padding:0 2.9vw;
+                                    }
                                     .wrap{
                                         width: 100%;
                                         display: flex;
                                         justify-content: space-between;
                                         align-items: center;
                                         padding-bottom: 1vw;
+                                        @include mob-width {
+                                            padding-bottom: 7.5vw;
+                                        }
                                         .txt{
                                             font-size: 1.56vw;
                                             font-weight: bold;
@@ -3324,6 +3417,10 @@ body {
                                             color: #fff;
                                             align-items: end;
                                             z-index: 2;
+                                            @include mob-width {
+                                                font-size: 4.8vw;
+                                                letter-spacing: 1.18vw;
+                                            }
                                             &:after{
                                                 content: '';
                                                 //position: absolute;
@@ -3334,6 +3431,10 @@ body {
                                             width: 1.2vw;
                                             z-index: 2;
                                             padding-right: 3.11vw;
+                                            @include mob-width {
+                                                width: 5.6vw;
+                                                margin-right: 3.47vw;
+                                            }
                                             img{
                                                 width: 100%;
                                             }
@@ -3354,10 +3455,15 @@ body {
         position: relative;
         $boxWidth_pc: 1920px;
         $boxHeight_pc: 999px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 646px;
         background-size: 100%;
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgIcon{
             @for $i from 1 through 1 {
@@ -3371,6 +3477,11 @@ body {
                             $h: 161px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
+                                left: #{math.div(228px, $boxWidth_mb) * 100%};
+                                top: #{math.div(-18px, $boxHeight_mb) * 100%};
+                                $w: 55px;
+                                $h: 55px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 2 {
                             transform-origin: right;
@@ -3417,11 +3528,10 @@ body {
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
                 top: #{math.div(0px, $boxHeight_pc) * 100%};
                 @include mob-width {
-                    // $w: 204px;
-                    // $h: 89px;
-                    // @include getImgBoxSize($w, $h, $boxWidth_mb);
-                    // left: #{math.div(85px, $boxWidth_mb) * 100%};
-                    // top: #{math.div(0px, $boxHeight_mb) * 100%};
+                    top: #{math.div(0px, $boxHeight_mb) * 100%};
+                    $w: 138px;
+                    $h: 28px;
+                    @include getImgBoxSize($w, $h, $boxWidth_mb);
                 }
                 &-obj {
                     position: absolute;
@@ -3433,9 +3543,6 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-image: url('~/static/image/pc/aboutUs/ourTeam.png');
-                    @include mob-width {
-                        background-image: url('~/static/image/mb/mbVisionTitle.png');
-                    }
                 }
             }
         }
@@ -3443,15 +3550,42 @@ body {
             position: absolute;
             width: 100%;
             top: #{math.div(225px, $boxHeight_pc) * 100%};
-            .teamBtn{
+            @include mob-width {
+                top: #{math.div(58px, $boxHeight_mb) * 100%};
+            }
+            .teamBtn{                    
+                    .swiper-pagination{
+                        display: none;
+                        width: 100%;
+                        --swiper-theme-color: #9dff43;
+                        --swiper-pagination-color: #9dff43;/* 两种都可以 */
+                        --swiper-pagination-bullet-inactive-color: #565656;
+                        --swiper-pagination-bullet-inactive-opacity: 1;
+                        --swiper-pagination-left: 9px;
+                        margin-top: 2.33vw;
+                        @include mob-width {
+                            display: block;
+                        }
+                    }
+                    .swiper-pagination-bullet{
+                        margin: 0 2.4vw;
+                    }
+                
                 .swiper-slide{
                     display: flex;
                     justify-content: center;
                     .modelListAnime{
                         width: 73%;
                         display: flex;
+                        @include mob-width {
+                            width: 81.87%;
+                            flex-direction: column;
+                        }
                         .teamBtnImg{
                             width: 36%;
+                            @include mob-width {
+                                width: 100%;
+                            }
                             img{
                                 width: 100%;
                             }
@@ -3459,6 +3593,11 @@ body {
                         .teamBtnTxt{
                             width: 64%;
                             padding-left: 3.18vw;
+                            @include mob-width {
+                                width: 100%;
+                                padding: 0;
+                                text-align: center;
+                            }
                             .name{
                                 font-size: 2.2vw;
                                 color: #fff;
@@ -3468,6 +3607,11 @@ body {
                                 font-style: normal;
                                 line-height: normal;
                                 letter-spacing: 0.538vw;
+                                @include mob-width {
+                                    padding-top: 6.9vw;
+                                    font-size: 4.8vw;
+                                    letter-spacing: 1.2vw;
+                                }
                             }
                             .enName{
                                 font-size: 1.6vw;
@@ -3478,6 +3622,11 @@ body {
                                 font-style: normal;
                                 line-height: normal;
                                 letter-spacing: 0.5vw;
+                                @include mob-width {
+                                    font-size: 4.2vw;
+                                    margin-top: 1.6vw;
+                                    letter-spacing: 1.05vw;
+                                }
                             }
                             .des{
                                 font-size: 2.2vw;
@@ -3492,14 +3641,27 @@ body {
                                 font-style: normal;
                                 line-height: normal;
                                 letter-spacing: 0.538vw;
+                                @include mob-width {
+                                    font-size: 4.26vw;
+                                    margin-top: 4vw;
+                                    width: 81.87vw;
+                                    height: 26.93vw;
+                                    text-align: initial;
+                                }
                                 &::-webkit-scrollbar {
                                     width: 10px;
                                     border-radius: 20px;
+                                    @include mob-width {
+                                        width: 2.6vw;
+                                    }
                                 }
                                 &::-webkit-scrollbar-thumb {
                                     background-color: #6e6c6c;
                                     width: 10px;
                                     border-radius: 20px;
+                                    @include mob-width {
+                                        width: 2.6vw;
+                                    }
                                 }
                             }
                         }
@@ -3517,7 +3679,7 @@ body {
                     background-position: center;
                     background-image: url('~/static/image/pc/main/iconPrev.svg');
                     @include mob-width {
-                        
+                        display: none;
                     }
                 }
                 
@@ -3533,7 +3695,7 @@ body {
                     background-position: center;
                     background-image: url('~/static/image/pc/main/iconNext.svg');
                     @include mob-width {
-                        
+                        display: none;
                     }
                 }
             }
@@ -3545,10 +3707,15 @@ body {
         position: relative;
         $boxWidth_pc: 1920px;
         $boxHeight_pc: 126px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 41px;
         background-size: 100%;
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgIcon{
             &-anime {
@@ -3558,6 +3725,13 @@ body {
                 $w: 161px;
                 $h: 161px;
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
+                @include mob-width {
+                    left: #{math.div(258px, $boxWidth_mb) * 100%};
+                    top: #{math.div(-2px, $boxHeight_mb) * 100%};
+                    $w: 55px;
+                    $h: 55px;
+                    @include getImgBoxSize($w, $h, $boxWidth_mb);
+                }
                 &-obj{
                     position: absolute;
                     left: 0;
@@ -3581,6 +3755,9 @@ body {
                 @include getImgBoxSize($w, $h, $boxWidth_pc);
                 top: #{math.div(0px, $boxHeight_pc) * 100%};
                 @include mob-width {
+                    $w: 185px;
+                    $h: 22px;
+                    @include getImgBoxSize($w, $h, $boxWidth_mb);
                 }
                 &-obj {
                     position: absolute;
@@ -3592,19 +3769,22 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-image: url('~/static/image/pc/aboutUs/legalTeam.png');
-                    @include mob-width {
-                        background-image: url('~/static/image/mb/mbVisionTitle.png');
-                    }
                 }
             }
         }
         .subTitle1{
             &-anime{
                 margin-top: 6.5%;
+                @include mob-width {
+                    margin-top: 10.4%;
+                }
                 &-obj{
                     text-align: center;
                     font-size: 2.18vw;
                     color: #fff;
+                    @include mob-width {
+                        font-size: 3.2vw;
+                    }
                 }
             }
         }
@@ -3613,6 +3793,9 @@ body {
                 width: 70.8%;
                 margin: auto;
                 margin-top: 6%;
+                @include mob-width {
+                    margin-top: 4.5%;
+                }
                 img{
                     width: 100%;
                 }
@@ -3621,10 +3804,16 @@ body {
         .subTitle2{
             &-anime{
                 margin-top: 3.23%;
+                @include mob-width {
+                    margin-top: 3.2%;
+                }
                 &-obj{
                     text-align: center;
                     font-size: 2.18vw;
                     color: #fff;
+                    @include mob-width {
+                        font-size: 3.2vw;
+                    }
                 }
             }
         }
@@ -3633,6 +3822,9 @@ body {
                 width: 39.7%;
                 margin: auto;
                 margin-top: 2.3%;
+                @include mob-width {
+                    margin-top: 2.9%;
+                }
                 img{
                     width: 100%;
                 }
