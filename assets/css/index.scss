@@ -19,7 +19,7 @@ body {
     position: absolute;
     width: 100%;
     $headerWidth_pc: 1920px;
-    $headerHeight_pc: 100px;
+    $headerHeight_pc: 210px;
     $headerWidth_mb: 375px;
     $headerHeight_mb: 60px;
     > .height {
@@ -581,14 +581,18 @@ body {
             color: #000000;
             color: #fff;
         }
-        .navItem{
+        .navItemBox{
             margin-top: 1.56vw;
+            @include mob-width {
+                margin-top: 9.6vw;
+            }
+        }
+        .navItem{
             font-size: 1.25vw;
             &:hover{
                 color:#c2e6ac;
             }
             @include mob-width {
-                margin-top: 9.6vw;
                 font-size: 5vw;
             }
         }
@@ -2035,6 +2039,7 @@ body {
                                 }
                             }
                             .title{
+                                width: 90%;
                                 position: absolute;
                                 color: #c7ff94;
                                 line-height: normal;
@@ -2510,16 +2515,22 @@ body {
     
 }
 #modelPage{
+    overflow-x: hidden;
     .modelContain{
         width: 100%;
         position: relative;
         $boxWidth_pc: 1920px;
-        $boxHeight_pc: 2050px;
+        $boxHeight_pc: 2250px;
+        $boxWidth_mb: 375px;
+        $boxHeight_mb: 712px;
         background: #000000;
         background-size: 100%;
         > .height {
             display: block;
             padding-bottom: #{math.div($boxHeight_pc, $boxWidth_pc) * 100%};
+            @include mob-width {
+                padding-bottom: #{math.div($boxHeight_mb, $boxWidth_mb) * 100%};
+            }
         }
         .bgIcon{
             @for $i from 1 through 6 {
@@ -2533,6 +2544,12 @@ body {
                             $h: 1440px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
+                                left: #{math.div(0px, $boxWidth_mb) * 100%};
+                                top: #{math.div(221px, $boxHeight_mb) * 100%};
+                                $w: 375px;
+                                $h: 634px;
+                                width: 100%;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 2 {
                             display: none;
@@ -2546,7 +2563,11 @@ body {
                             $h: 565px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
-                                display: none;
+                                left: #{math.div(-50px, $boxWidth_mb) * 100%};
+                                top: #{math.div(126px, $boxHeight_mb) * 100%};
+                                $w: 96px;
+                                $h: 154px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 4 {
                             left: #{math.div(1057px, $boxWidth_pc) * 100%};
@@ -2555,7 +2576,11 @@ body {
                             $h: 151px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
-                                display: none;
+                                left: #{math.div(220px, $boxWidth_mb) * 100%};
+                                top: #{math.div(68px, $boxHeight_mb) * 100%};
+                                $w: 55px;
+                                $h: 55px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 5 {
                             left: #{math.div(1083px, $boxWidth_pc) * 100%};
@@ -2564,7 +2589,11 @@ body {
                             $h: 910px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
-                                display: none;
+                                left: #{math.div(310px, $boxWidth_mb) * 100%};
+                                top: #{math.div(643.5px, $boxHeight_mb) * 100%};
+                                $w: 107.87px;
+                                $h: 229px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         } @else if $i == 6 {
                             left: #{math.div(0px, $boxWidth_pc) * 100%};
@@ -2573,7 +2602,10 @@ body {
                             $h: 270px;
                             @include getImgBoxSize($w, $h, $boxWidth_pc);
                             @include mob-width {
-                                display: none;
+                                top: #{math.div(1036.5px, $boxHeight_mb) * 100%};
+                                $w: 74px;
+                                $h: 99px;
+                                @include getImgBoxSize($w, $h, $boxWidth_mb);
                             }
                         }
                         &-obj {
@@ -2621,6 +2653,9 @@ body {
             &-anime {
                 position: absolute;
                 top: #{math.div(306px, $boxHeight_pc) * 100%};
+                @include mob-width {
+                    top: #{math.div(75px, $boxHeight_mb) * 100%};
+                }
                 &-obj {
                     font-size: 4.58vw;
                     font-weight: 900;
@@ -2629,6 +2664,10 @@ body {
                     line-height: normal;
                     letter-spacing: 0.6vw;
                     color: #9dff43;
+                    @include mob-width {
+                        font-size: 8vw;
+                        letter-spacing: 1vw;
+                    }
                 }
             }
         }
@@ -2638,6 +2677,9 @@ body {
             &-anime {
                 position: absolute;
                 top: #{math.div(437px, $boxHeight_pc) * 100%};
+                @include mob-width {
+                    top: #{math.div(120px, $boxHeight_mb) * 100%};
+                }
                 &-obj {
                     font-size: 2.4vw;
                     font-weight: 600;
@@ -2646,99 +2688,115 @@ body {
                     line-height: normal;
                     letter-spacing: 0.9vw;
                     color: #ffffff;
-                }
-            }
-        }
-        .social {
-            @for $i from 1 through 4 {
-                .social__#{$i} {
-                    &-anime {
-                        cursor: pointer;
-                        position: absolute;
-                        $w: 38px;
-                        $h: 38px;
-                        left: #{math.div(1824px, $boxWidth_pc) * 100%};
-                        @if $i == 1 {
-                            top: #{math.div(329px, $boxHeight_pc) * 100%};
-                            @include getImgBoxSize($w, $h, $boxWidth_pc);
-                            @include mob-width {
-                            }
-                        } @else if $i == 2 {
-                            top: #{math.div(423px, $boxHeight_pc) * 100%};
-                            @include getImgBoxSize($w, $h, $boxWidth_pc);
-                            @include mob-width {
-                                display: none;
-                            }
-                        } @else if $i == 3 {
-                            top: #{math.div(513px, $boxHeight_pc) * 100%};
-                            @include getImgBoxSize($w, $h, $boxWidth_pc);
-                            @include mob-width {
-                                display: none;
-                            }
-                        } @else if $i == 4 {
-                            $w: 42px;
-                            $h: 209px;
-                            top: #{math.div(664px, $boxHeight_pc) * 100%};
-                            // left: #{math.div(1832px, $boxWidth_pc) * 100%};
-                            @include getImgBoxSize($w, $h, $boxWidth_pc);
-                            @include mob-width {
-                                display: none;
-                            }
-                        }
-                        &-obj {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            background-size: 100%;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            @if $i == 1 {
-                                background-image: url('~/static/image/pc/main/ig-icon1.png');
-                                &:hover{
-                                    background-image: url('~/static/image/pc/main/ig-icon2.png');
-                                }
-                                @include mob-width {
-                                }
-                            } @else if $i == 2 {
-                                background-image: url('~/static/image/pc/main/facebook-icon1.png');
-                                &:hover{
-                                    background-image: url('~/static/image/pc/main/facebook-icon2.png');
-                                }
-                                @include mob-width {
-                                }
-                            } @else if $i == 3 {
-                                background-image: url('~/static/image/pc/main/tik-tok-icon1.png');
-                                &:hover{
-                                    background-image: url('~/static/image/pc/main/tik-tok-icon2.png');
-                                }
-                                @include mob-width {
-                                }
-                            } @else if $i == 4 {
-                                background-image: url('~/static/image/pc/main/scrollicon.png');
-                                @include mob-width {
-                                }
-                            }
-                        }
+                    @include mob-width {
+                        font-size: 4.8vw;
+                        letter-spacing: 1.12vw;
                     }
                 }
             }
         }
+        // .social {
+        //     @for $i from 1 through 4 {
+        //         .social__#{$i} {
+        //             &-anime {
+        //                 cursor: pointer;
+        //                 position: absolute;
+        //                 $w: 38px;
+        //                 $h: 38px;
+        //                 left: #{math.div(1824px, $boxWidth_pc) * 100%};
+        //                 @if $i == 1 {
+        //                     top: #{math.div(329px, $boxHeight_pc) * 100%};
+        //                     @include getImgBoxSize($w, $h, $boxWidth_pc);
+        //                     @include mob-width {
+        //                     }
+        //                 } @else if $i == 2 {
+        //                     top: #{math.div(423px, $boxHeight_pc) * 100%};
+        //                     @include getImgBoxSize($w, $h, $boxWidth_pc);
+        //                     @include mob-width {
+        //                         display: none;
+        //                     }
+        //                 } @else if $i == 3 {
+        //                     top: #{math.div(513px, $boxHeight_pc) * 100%};
+        //                     @include getImgBoxSize($w, $h, $boxWidth_pc);
+        //                     @include mob-width {
+        //                         display: none;
+        //                     }
+        //                 } @else if $i == 4 {
+        //                     $w: 42px;
+        //                     $h: 209px;
+        //                     top: #{math.div(664px, $boxHeight_pc) * 100%};
+        //                     // left: #{math.div(1832px, $boxWidth_pc) * 100%};
+        //                     @include getImgBoxSize($w, $h, $boxWidth_pc);
+        //                     @include mob-width {
+        //                         display: none;
+        //                     }
+        //                 }
+        //                 &-obj {
+        //                     position: absolute;
+        //                     left: 0;
+        //                     top: 0;
+        //                     right: 0;
+        //                     bottom: 0;
+        //                     background-size: 100%;
+        //                     background-repeat: no-repeat;
+        //                     background-position: center;
+        //                     @if $i == 1 {
+        //                         background-image: url('~/static/image/pc/main/ig-icon1.png');
+        //                         &:hover{
+        //                             background-image: url('~/static/image/pc/main/ig-icon2.png');
+        //                         }
+        //                         @include mob-width {
+        //                         }
+        //                     } @else if $i == 2 {
+        //                         background-image: url('~/static/image/pc/main/facebook-icon1.png');
+        //                         &:hover{
+        //                             background-image: url('~/static/image/pc/main/facebook-icon2.png');
+        //                         }
+        //                         @include mob-width {
+        //                         }
+        //                     } @else if $i == 3 {
+        //                         background-image: url('~/static/image/pc/main/tik-tok-icon1.png');
+        //                         &:hover{
+        //                             background-image: url('~/static/image/pc/main/tik-tok-icon2.png');
+        //                         }
+        //                         @include mob-width {
+        //                         }
+        //                     } @else if $i == 4 {
+        //                         background-image: url('~/static/image/pc/main/scrollicon.png');
+        //                         @include mob-width {
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         .des{
             width: 100%;
             position: absolute;
             display: flex;
             justify-content: center;
             top: #{math.div(611px, $boxHeight_pc) * 100%};
+            @include mob-width {
+                top: #{math.div(179.5px, $boxHeight_mb) * 100%};
+            }
             .desWrap{
                 position: relative;
                 display: flex;
                 width: 90%;
                 margin-left: -2.5vw;
+                @include mob-width {
+                    flex-direction: column;
+                    margin-left: unset;
+                    width: 82.5%;
+                }
                 .desImg{
                     width: 50%;
                     margin-left: 2.5vw;
+                    @include mob-width {
+                        width: 100%;
+                        margin-left: unset;
+                    }
                     img{
                         width: 100%;
                     }
@@ -2749,6 +2807,10 @@ body {
                     margin-left: 2.5vw;
                     display: flex;
                     flex-direction: column;
+                    @include mob-width {
+                        width: 100%;
+                        margin-left: unset;
+                    }
                     .desTitle{
                         margin: 0;
                         font-size: 1.875vw;
@@ -2761,6 +2823,11 @@ body {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
+                        @include mob-width {
+                            margin-top: 6.4vw;
+                            font-size: 3.7vw;
+                            letter-spacing: 0.57vw;
+                        }
                     }
                     .desTxt{
                         list-style-type: none;
@@ -2778,8 +2845,18 @@ body {
                         font-stretch: normal;
                         font-style: normal;
                         line-height: normal;
+                        @include mob-width {
+                            width: 100%;
+                            margin-top: 4.5vw;
+                            font-size: 3.2vw;
+                            letter-spacing: 0.5vw;
+                            
+                        }
                         li{
                             line-height: 1.68;
+                            @include mob-width{
+                                line-height: 2;
+                            }
                             &::before{
                                 content:"";
                                 display: inline-block;
@@ -2787,7 +2864,10 @@ body {
                                 height: 0.9vw;
                                 background-color: #d4f8b3;
                                 border-radius: 50%;
-                                //margin-right: 1vw;
+                                @include mob-width{
+                                    width: 1.6vw;
+                                    height: 1.6vw;
+                                }
                             }
                         }
                         
@@ -2806,22 +2886,37 @@ body {
         }
     }
     .modelSlider{
+        top: 74.43vw;
         position: absolute;
-        margin-top: -40vw;
         width: 100%;
+        @include mob-width{
+            //margin-top: -120vw;
+            top: unset;
+            position: relative;
+        }
         .modelListWrap{
             position: relative;
             .modelListBox{
                 .modelListAnime{
                     display: flex;
                     flex-direction: row;
+                    @include mob-width{
+                        flex-direction:column-reverse;
+                        justify-content: center;
+                    }
                     .modelTxt{
                         position: relative;
                         width: 46%;
                         color: #ffffff;
+                        @include mob-width{
+                            width: 100%;
+                        }
                         .modelTxtWrap{
                             width: 60%;
                             margin: auto;
+                            @include mob-width{
+                                width: 66.7%;
+                            }
                             .title{
                                 margin-top: 2.45vw;
                                 font-size: 1.87vw;
@@ -2834,6 +2929,11 @@ body {
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
                                 color: #a1ff4b;
+                                @include mob-width{
+                                    margin-top: 9.3vw;
+                                    font-size: 3.73vw;
+                                    letter-spacing: 0.272vw;
+                                }
                             }
                             .subTitle{
                                 margin-top: 0.6vw;
@@ -2847,6 +2947,11 @@ body {
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
                                 color: #a1ff4b;
+                                @include mob-width{
+                                    margin-top: 0.53vw;
+                                    font-size: 3.73vw;
+                                    letter-spacing: 0.272vw;
+                                }
                             }
                             .des{
                                 color: #ffffff;
@@ -2865,11 +2970,21 @@ body {
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
                                 -webkit-line-clamp: 6;
+                                @include mob-width{
+                                    margin-top: 1.6vw;
+                                    font-size: 3.2vw;
+                                    letter-spacing: 0.8vw;
+                                    margin-bottom: 35vw;
+                                }
                             }
                         }
                     }
                     .modelImg{
                         width: 54%;
+                        @include mob-width{
+                            width: 82%;
+                            margin: auto;
+                        }
                         img{
                             width: 100%;
                         }
@@ -2889,6 +3004,12 @@ body {
                 &::after{
                     content: '';
                 }
+                @include mob-width{
+                    top: 101vw;
+                    left: 42vw;
+                    width: 6.1vw;
+                    height: 6.1vw;
+                }
             }
             
             .swiper-button-next {
@@ -2903,6 +3024,34 @@ body {
                 background-image: url('~/static/image/pc/main/iconNext.png');
                 &::after{
                     content: '';
+                }
+                @include mob-width{
+                    top: 101vw;
+                    left: 51.5vw;
+                    width: 6.1vw;
+                    height: 6.1vw;
+                }
+            }
+            .swiper-pagination{
+                display: none;
+                --swiper-theme-color: #9dff43;
+                --swiper-pagination-color: #9dff43;/* 两种都可以 */
+                --swiper-pagination-bullet-inactive-color: #565656;
+                --swiper-pagination-bullet-inactive-opacity: 1;
+                --swiper-pagination-left: 9px;
+                .swiper-pagination-bullet{
+                    width: 30%;
+                    height: 2px;
+                    border-radius: 0px;
+                    margin:1.5%;
+                }
+                @include mob-width{
+                    display: block;
+                    top: 52vw;
+                    width: 66.7%;
+                    height: 2px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }

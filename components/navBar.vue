@@ -13,21 +13,31 @@
                             <img :src="require('@/static/image/pc/main/logo-img.png')" alt="" />
                         </div>
                     </a>
-                    <a href="/aboutUs">
-                        <div class="toAboutUs navItem">關於我們</div>
-                    </a>
-                    <a href="/model">
-                        <div class="toModel navItem">車種介紹</div>
-                    </a>
-                    <a href="/news">
-                        <div class="toNews navItem">最新消息</div>
-                    </a>
-                    <a href="/service">
-                        <div class="toService navItem">服務項目</div>
-                    </a>
-                    <a href="/contactUs">
-                        <div class="toContact navItem">聯絡我們</div>
-                    </a>
+                    <div class="navItemBox">
+                        <a href="/aboutUs">
+                            <div class="toAboutUs navItem">關於我們</div>
+                        </a>
+                    </div>
+                    <div class="navItemBox">
+                        <a href="/model">
+                            <div class="toModel navItem">車種介紹</div>
+                        </a>
+                    </div>
+                    <div class="navItemBox">
+                        <a href="/news">
+                            <div class="toNews navItem">最新消息</div>
+                        </a>
+                    </div>
+                    <div class="navItemBox">
+                        <a href="/service">
+                            <div class="toService navItem">服務項目</div>
+                        </a>
+                    </div>
+                    <div class="navItemBox">
+                        <a href="/contactUs">
+                            <div class="toContact navItem">聯絡我們</div>
+                        </a>
+                    </div>
                     <div class="socialBtnBox">
                         <a href="https://www.instagram.com/bc_haul/" target="_blank">
                             <div class="igBtn icon"></div>

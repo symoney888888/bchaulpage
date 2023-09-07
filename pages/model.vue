@@ -18,7 +18,7 @@
                 </div>
                 <div class="subTitle">
                     <div class="subTitle-anime">
-                        <div class="subTitle-anime-obj">車種介紹</div>
+                        <div class="subTitle-anime-obj">專利透明車廂運載車介紹</div>
                     </div>
                 </div>
                 <div class="des">
@@ -59,6 +59,7 @@
                         <div class="swiper-button-prev" slot="button-prev"></div>
                         <div class="swiper-button-next" slot="button-next"></div>
                     </swiper>
+                    <div class="swiper-pagination" slot="button-pagination"></div>
                 </div>
             </div>
         </div>
@@ -121,6 +122,9 @@ export default {
                     },
                     768: {
                         slidesPerView: 1,
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
                     },
                 },
                 navigation: {
