@@ -141,7 +141,8 @@
                                     </div>
                                 </div>
                             </swiper-slide>
-                            
+                            <div class="swiper-button-prev slide-one-button-prev caseSwiper1-button-prev" slot="button-prev"></div>
+                            <div class="swiper-button-next slide-one-button-next caseSwiper1-button-next" slot="button-next"></div>
                     </swiper>
                     <swiper class="swiper caseSwiper2" :options="swiperCase2Option" ref="swiperThumbs">
                             <swiper-slide
@@ -160,8 +161,8 @@
                             </swiper-slide>
                             
                     </swiper>
-                    <div class="swiper-button-prev slide-one-button-prev" slot="button-prev"></div>
-                    <div class="swiper-button-next slide-one-button-next" slot="button-next"></div>
+                    <div class="swiper-button-prev slide-one-button-prev caseSwiper2-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next slide-one-button-next caseSwiper2-button-next" slot="button-next"></div>
                 </div>
                 <div class="height"></div>
             </section>
@@ -372,7 +373,11 @@ export default {
                         slideToClickedSlide:true
                     }
                 },
-                
+                navigation: {
+                    nextEl: '.caseSwiper1-button-next',
+                    prevEl: '.caseSwiper1-button-prev'
+                },
+
             },
             swiperCase2Option:{
                 loop:true,
@@ -384,8 +389,8 @@ export default {
                 centeredSlides: true,
                 slideToClickedSlide:true,
                 navigation: {
-                    nextEl: '.slide-one-button-next',
-                    prevEl: '.slide-one-button-prev'
+                    nextEl: '.caseSwiper2-button-next',
+                    prevEl: '.caseSwiper2-button-prev'
                 },
             },
             qaInfoList:[
