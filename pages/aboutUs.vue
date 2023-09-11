@@ -197,15 +197,15 @@ export default {
             aboutUsNavBtnList: ['公司簡介', '員工技術技能簡介', '法律顧問團隊'],
             serviceTxt: [
                 {
-                    url: '',
+                    url: '/service',
                     txt: '服務案例',
                 },
                 {
-                    url: '',
+                    url: '/service',
                     txt: '頂級車輛托運',
                 },
                 {
-                    url: '',
+                    url: '/service',
                     txt: '專利透明車廂運載車介紹',
                 },
             ],
