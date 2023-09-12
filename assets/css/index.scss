@@ -4471,7 +4471,7 @@ body {
                             } @else if $i == 2 {
                                 background-image: url('~/static/image/pc/service/caseBg.png');
                                 @include mob-width {
-                                    background-image: url('~/static/image/mb/news/BgImg.png');
+                                    background-image: url('~/static/image/mb/news/bgImg.png');
                                 }
                             } @else if $i == 3 {
                                 background-image: url('~/static/image/pc/main/newsBgIcon1.png');
@@ -4792,7 +4792,7 @@ body {
                             } @else if $i == 2 {
                                 background-image: url('~/static/image/pc/service/caseBg.png');
                                 @include mob-width {
-                                    background-image: url('~/static/image/mb/news/BgImg.png');
+                                    background-image: url('~/static/image/mb/news/bgImg.png');
                                 }
                             }
                         }
