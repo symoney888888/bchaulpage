@@ -227,11 +227,11 @@
                 <div class="newsList">
                     <swiper class="swiper" :options="swiperOption">
                         <swiper-slide :class="`newsList__${index + 1} newsListBox`" v-for="(item, index) in news" :key="'newsList' + index" data-anime>
-                            <div :class="`newsList__${index + 1}-anime newsListAnime`">
-                                <a :href="item.url">
+                            <div :class="`newsList__${index + 1}-anime newsListAnime`" @click="popUpCard(index)">
+                                <a href="javascript:void(0);">
                                     <img class="newsImg" :src="item.image" />
                                 </a>
-                                <a :href="item.url">
+                                <a href="javascript:void(0);">
                                     <div class="newsTxt">
                                         <p class="title">{{ item.title }}</p>
                                         <div class="des">{{ item.des }}</div>
@@ -250,6 +250,7 @@
         </div>
         <Footer />
         <Nav-bar @navBarOpen="navBarOpen = false" v-if="navBarOpen" />
+        <News-pop-up :news-list="news" :pop-up-num="popUpNum" v-if="popUpActive" @popUpClose="popUpActive = false" />
     </div>
 </template>
 
@@ -262,6 +263,8 @@ export default {
         return {
             caseNum: 1,
             navBarOpen: false,
+            popUpNum: 0,
+            popUpActive: false,
             caseList: [
                 {
                     title: '保養運送',
@@ -402,7 +405,12 @@ export default {
             } else {
                 this.isMobile = false
             }
-        }
+        },
+        popUpCard(index) {
+            const self = this
+            self.popUpActive = true
+            self.popUpNum = index
+        },
     },
 }
 </script>

@@ -27,13 +27,17 @@
                 <div class="newsListWrap">
                     <div :class="`newsList__${index + 1} newsListCard`" v-for="(item, index) in newsContainList" :key="'newsList' + index" data-anime>
                         <div :class="`newsList__${index + 1}-anime newsListAnime`" @click="popUpCard(index)">
-                            <img class="newsImg" :src="item.image" />
-                            <div class="newsTxt">
-                                <p class="title">{{ item.title }}</p>
-                                <div class="des">{{ item.des }}</div>
-                                <p class="date">{{ item.date }}</p>
-                                <div class="height"></div>
-                            </div>
+                            <a href="javascript:void(0);">
+                                <img class="newsImg" :src="item.image" />
+                            </a>
+                            <a href="javascript:void(0);">
+                                <div class="newsTxt">
+                                    <p class="title">{{ item.title }}</p>
+                                    <div class="des">{{ item.des }}</div>
+                                    <p class="date">{{ item.date }}</p>
+                                    <div class="height"></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
