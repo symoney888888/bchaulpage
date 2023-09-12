@@ -106,12 +106,35 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="bottomSocial">
-
-                        </div> -->
                     </div>
                 </div>
             </section>
+            <div class="social footerBox">
+                <div class="title">社群連結</div>
+                <div class="hr"></div>
+                <div class="socialBtnBox">
+                    <a href="https://www.instagram.com/bc_haul/" target="_blank">
+                        <div class="igBtn icon">
+                            <!-- <img :src="require('@/static/image/pc/main/ig-icon1.png')" alt="" /> -->
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/bchaul.tw/" target="_blank">
+                        <div class="fbBtn icon">
+                            <!-- <img :src="require('@/static/image/pc/main/facebook-icon1.png')" alt="" /> -->
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@bc_haul" target="_blank">
+                        <div class="tiktokBtn icon">
+                            <!-- <img :src="require('@/static/image/pc/main/tik-tok-icon1.png')" alt="" /> -->
+                        </div>
+                    </a>
+                    <a href="https://line.me/R/ti/p/@bc_haul" target="_blank">
+                        <div class="lineBtn icon">
+                            <!-- <img :src="require('@/static/image/pc/main/line-copy.png')" alt="" /> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
         <Nav-bar @navBarOpen="navBarOpen = false" v-if="navBarOpen" />
     </div>
