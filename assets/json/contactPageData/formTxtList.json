@@ -1,0 +1,26 @@
+{
+    "car_brandList": [
+        "MCLAREN- 麥卡倫",
+        "BUGATTI- 布加迪",
+        "PAGANI- 帕加尼",
+        "ROLLYROYCE- 勞斯萊斯",
+        "FERRARI- 法拉利",
+        "MASERATI- 瑪莎拉蒂",
+        "LAMBORGHINI- 藍寶堅尼",
+        "BENTLEY- 賓利",
+        "PORSCHE- 保時捷",
+        "ASTONMARTIN- 阿斯頓馬丁",
+        "M-BENZ- 賓士",
+        "BMW- 寶馬",
+        "KOENIGSEGG- 科尼賽克",
+        "JAGUAR- 捷豹",
+        "LOTUS- 蓮花",
+        "LEXUS- 凌志",
+        "AUDI- 奧迪",
+        "CORVETTE- 克爾維特",
+        "SPYKER- 世爵",
+        "TESLA-特斯拉",
+        "Others-其他品牌"
+    ],
+    "car_color": ["紅", "橙", "黃", "綠", "藍", "紫", "黑", "白", "灰", "其他"]
+}

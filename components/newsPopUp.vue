@@ -4,7 +4,7 @@
     
     <div class="popUpCard">
         <div class="closeBtn" @click="popUpClose()"><img :src="require('@/static/image/pc/main/closeBtn.png')" alt="" /></div>
-        <img class="newsImg" :src="newsList[popUpNum].image" />
+        <img class="newsImg" :src="require(`@/static/image${newsList[popUpNum].image}`)" />
         <div class="newsTxt">
             <p class="title">{{ newsList[popUpNum].title }}</p>
             <div class="des">{{ newsList[popUpNum].des }}</div>

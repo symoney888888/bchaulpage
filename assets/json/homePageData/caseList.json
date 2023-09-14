@@ -1,0 +1,28 @@
+{
+    "caseList": [
+        {
+            "title": "保養運送",
+            "caseImg": "/pc/main/circlepic-1.png",
+            "caseBg": "/pc/main/car-background-1.png",
+            "des": "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。"
+        },
+        {
+            "title": "超跑運載",
+            "caseImg": "/pc/main/circlepic-2.png",
+            "caseBg": "/pc/main/car-background-2.png",
+            "des": "特別謹慎處理，上車時的角度幾乎貼近地面，一點都不用擔心會刮傷車輛，提供6個角度的即時影像，隨時可以看到愛車在車廂狀況以及到目的地下載的視訊狀況甚至可以監控到司機駕駛中的情況，非常安心。"
+        },
+        {
+            "title": "車測運送",
+            "caseImg": "/pc/main/circlepic-3.png",
+            "caseBg": "/pc/main/car-background-3.png",
+            "des": "為確保車輛安全到達測試場地，提供可靠的運輸，確保車輛狀態不受損，有助於順利進行測試流程，司機貼心現場等候測試完成後載回車輛，完成整個服務。"
+        },
+        {
+            "title": "車隊運送",
+            "caseImg": "/pc/main/circlepic-4.png",
+            "caseBg": "/pc/main/car-background-4.png",
+            "des": "提供高效率的多輛運輸，幫助車隊在不同地點間快速調度車輛，降低成本，確保整個運輸過程無縫協調。"
+        }
+    ]
+}

@@ -54,7 +54,7 @@
                                     }-anime serviceListAnime`"
                                 >
                                     <div class="serviceListImg">
-                                        <img :src="item.img" />
+                                        <img :src="require(`@/static/image${item.image}`)" />
                                     </div>
                                     <div class="serviceListBlur">
                                         <img
@@ -131,7 +131,7 @@
                             >   
                                 <div :class="`caseList__${index + 1}-anime caseListAnime`">
                                     <div class="caseList1Img">
-                                        <img :src="item.image" />
+                                        <img :src="require(`@/static/image${item.image}`)" />
                                     </div>
                                     <div class="caseList1Txt">
                                         <div class="caseList1TxtWrap">
@@ -152,14 +152,10 @@
                             >
                                 <div class="sliderWrap">
                                     <div class="sliderImg">
-                                        <img :src="item.image" alt="">
+                                        <img :src="require(`@/static/image${item.image}`)" alt="">
                                     </div>
-                                    <div class="sliderImg"></div>
-
                                 </div>
-                                
                             </swiper-slide>
-                            
                     </swiper>
                     <div class="swiper-button-prev slide-one-button-prev caseSwiper2-button-prev" slot="button-prev"></div>
                     <div class="swiper-button-next slide-one-button-next caseSwiper2-button-next" slot="button-next"></div>
@@ -218,70 +214,14 @@
     </div>
 </template>
 <script>
+import serviceListData from '~/assets/json/servicePageData/serviceList.json'
 export default {
     data() {
         return {
             swiper: null,
             navBarOpen: false,
             aboutUsNavBtnList: ["公司簡介", "員工技術技能簡介", "法律顧問團隊"],
-            serviceList: [
-                {
-                    id: 1,
-                    title: "頂級車輛托運",
-                    img: require("@/static/image/pc/service/service1.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 2,
-                    title: "大小車輛運輸",
-                    img: require("@/static/image/pc/service/service2.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 3,
-                    title: "重機托運",
-                    img: require("@/static/image/pc/service/service3.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 4,
-                    title: "特殊車輛運送",
-                    img: require("@/static/image/pc/service/service4.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 5,
-                    title: "重機車隊運輸",
-                    img: require("@/static/image/pc/service/service5.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 6,
-                    title: "大型車聚活動",
-                    img: require("@/static/image/pc/service/service6.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 7,
-                    title: "活動宣傳包車",
-                    img: require("@/static/image/pc/service/service7.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-                {
-                    id: 8,
-                    title: "機場接車服務",
-                    img: require("@/static/image/pc/service/service8.png"),
-                    des:
-                        "全新打造高規格超跑專用運輸車輛，擁有運送低底盤車型適用的全貼地式載台，並全程提供車套包覆保護，獨家專業的設備及一系列保護措施使您的愛車在運輸過程中與運輸車輛牢固的結合，保護您的愛車在運輸途中避免一切可能由於道路狀況和天氣變化所帶來的風險。",
-                },
-            ],
+            serviceList: serviceListData.serviceList,
             serviceListNum: 0,
             listCurrentNum: 0,
             swiperOption: {
@@ -321,44 +261,7 @@ export default {
                     },
                 },
             },
-            caseList: [
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case2.png"),
-                },
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case3.png"),
-                },
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case4.png"),
-                },
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case2.png"),
-                },
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case3.png"),
-                },
-                {
-                    title: "藍寶堅尼保養後協助拖運",
-                    des:
-                        "寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。",
-                    image: require("@/static/image/pc/service/case4.png"),
-                },
-            ],
+            caseList: serviceListData.caseList,
             swiperCase1Option:{
                 loop:true,
                 loopedSlides: 6,
@@ -393,44 +296,7 @@ export default {
                     prevEl: '.caseSwiper2-button-prev'
                 },
             },
-            qaInfoList:[
-                {
-                    title:'Ｑ1：托運車輛到目的地後有問題該怎麼辦?',
-                    des:'A：本公司在車輛到達目的地前跟接車人聯繫，到達目的地後接車人當著服務人員根據交車時的驗車照片對汽車進行檢測，如果發現問題，請當下立即與服務人員確認，本司將立即了解詳情並與接車人溝通解決問題。'
-                },
-                {
-                    title:'Ｑ2：託運交車後多久會進行發車?',
-                    des:'A：本司會根據車主要求提前安排，但是時間上另外加急的話，需要加收費用。'
-                },
-                {
-                    title:'Ｑ3：託運時會出現損傷嗎?',
-                    des:'A：正常情況下運輸過程中待托運車輛是不會出現任何損傷的情況，如果一旦出現汽車損傷，如果是小划痕或瑕疵可以直接找本司索賠，如果出現重大事故，這時候托運商業保險的作用就顯示出來了，由保險公司承擔所有損失。'
-                },
-                {
-                    title:'Ｑ4：承諾託運時效逾期怎麼處理?',
-                    des:'A：正常情況下，我司的承諾運輸時效都不會出現逾期，如果出現逾期，我司會採取減免運費的方式來解決托運時效逾期問題。當然車主也可以在簽署協議時提出要求，打比方說遲到賠付。如果出現運輸時效逾期可以要求物流公司進行索賠。'
-                },
-                {
-                    title:'Ｑ5：價格是怎麼計算的呢?',
-                    des:'A：各項收費標準採取電話報價，或至現場依照現場情況報價。'
-                },
-                {
-                    title:'Ｑ6：請問你們是多元化支付嗎?',
-                    des:'A：目前還是以收取現金為主，其他支付方式正在規劃中，造成您的不便請見諒。'
-                },
-                {
-                    title:'Ｑ7：我要怎麼知道我車輛現在的所在位子?',
-                    des:'A：我們的託運車每台都有GPS，您若是擔心您的愛車，可使用APP輸入我們給您的單子，在線上做查看，讓您時刻可以即時知道運送進度。'
-                },
-                {
-                    title:'Ｑ8：你們發票是電子發票嗎?可以使用載具嗎?',
-                    des:'A：實在抱歉，目前我們的發票是手開二聯式和手開三聯式，電子發票及載具的部分目前正在規劃中，造成您的不便請見諒。'
-                },
-                {
-                    title:'Ｑ9：你們的託運要多久之前先預約啊',
-                    des:'A：一通電話，立即叫車，讓您省去等待的時間。'
-                },
-            ],
+            qaInfoList:serviceListData.qaInfoList,
             infoOpen: null
         };
     },

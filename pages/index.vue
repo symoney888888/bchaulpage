@@ -118,7 +118,9 @@
                         <div class="car">
                             <div :class="`car__${index + 1}`">
                                 <div :class="`car__${index + 1}-anime carAnime`">
-                                    <div :class="`car__${index + 1}-anime-obj`" :style="`background-image: url(${item.caseBg})`"></div>
+                                    <div :class="`car__${index + 1}-anime-obj`" >
+                                        <img :src="require(`@/static/image${item.caseBg}`)" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +132,9 @@
                         <div class="carItem">
                             <div :class="`carItem__${index + 1}`">
                                 <div :class="`carItem__${index + 1}-anime carItemAnime`">
-                                    <div :class="`carItem__${index + 1}-anime-obj`" :style="`background-image: url(${item.caseImg})`"></div>
+                                    <div :class="`carItem__${index + 1}-anime-obj`" >
+                                        <img :src="require(`@/static/image${item.caseImg}`)" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +233,7 @@
                         <swiper-slide :class="`newsList__${index + 1} newsListBox`" v-for="(item, index) in news" :key="'newsList' + index" data-anime>
                             <div :class="`newsList__${index + 1}-anime newsListAnime`" @click="popUpCard(index)">
                                 <a href="javascript:void(0);">
-                                    <img class="newsImg" :src="item.image" />
+                                    <img class="newsImg" :src="require(`@/static/image${item.image}`)" />
                                 </a>
                                 <a href="javascript:void(0);">
                                     <div class="newsTxt">
@@ -256,6 +260,8 @@
 
 <script>
 import rightSideBar from '../components/rightSideBar.vue'
+import caseListData from '~/assets/json/homePageData/caseList.json'
+import newsListData from '~/assets/json/newsPageData/newsList.json'
 export default {
     components: { rightSideBar },
     name: 'IndexPage',
@@ -265,90 +271,8 @@ export default {
             navBarOpen: false,
             popUpNum: 0,
             popUpActive: false,
-            caseList: [
-                {
-                    title: '保養運送',
-                    caseImg: require('@/static/image/pc/main/circlepic-1.png'),
-                    caseBg: require('@/static/image/pc/main/car-background-1.png'),
-                    des: '寶輇車業是對於車子很愛惜的一家公司，才會專屬打造了透明車廂體，保護好客戶的愛車不被風吹雨淋，也給予客戶看的到的保障。我們的司機師傅揣著對於車子的喜愛，為客戶運送著車輛。',
-                },
-                {
-                    title: '超跑運載',
-                    caseImg: require('@/static/image/pc/main/circlepic-2.png'),
-                    caseBg: require('@/static/image/pc/main/car-background-2.png'),
-                    des: '特別謹慎處理，上車時的角度幾乎貼近地面，一點都不用擔心會刮傷車輛，提供6個角度的即時影像，隨時可以看到愛車在車廂狀況以及到目的地下載的視訊狀況甚至可以監控到司機駕駛中的情況，非常安心。',
-                },
-                {
-                    title: '車測運送',
-                    caseImg: require('@/static/image/pc/main/circlepic-3.png'),
-                    caseBg: require('@/static/image/pc/main/car-background-3.png'),
-                    des: '為確保車輛安全到達測試場地，提供可靠的運輸，確保車輛狀態不受損，有助於順利進行測試流程，司機貼心現場等候測試完成後載回車輛，完成整個服務。',
-                },
-                {
-                    title: '車隊運送',
-                    caseImg: require('@/static/image/pc/main/circlepic-4.png'),
-                    caseBg: require('@/static/image/pc/main/car-background-4.png'),
-                    des: '提供高效率的多輛運輸，幫助車隊在不同地點間快速調度車輛，降低成本，確保整個運輸過程無縫協調。',
-                },
-            ],
-            news: [
-                {
-                    title: '寶輇車業 試營運！',
-                    des: '寶輇車業開始試營運，歡迎舊雨新知有需要服務的朋友，隨時找我們合作，謝謝。',
-                    image: require('@/static/image/pc/news/news1.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '汽車品牌託運合作特約活動',
-                    des: '汽車品牌與託運服務業者攜手合作提供更尊榮的服務，為汽車品牌專屬優惠和合作方案，促進彼此間的合作關係。',
-                    image: require('@/static/image/pc/news/news2.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '車隊託運合作特約簽訂活動',
-                    des: '特定車隊與託運業者達成合作協議，提供定制合同條款和優惠價格，深化雙方間的夥伴關係。',
-                    image: require('@/static/image/pc/news/news3.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '車商託運合作特約合作計畫',
-                    des: '車商和託運業者合作，共同制定行銷策略和協作計劃，實現雙贏的商機。',
-                    image: require('@/static/image/pc/news/news4.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: 'VIP頂級客戶會員儲值託運方案活動',
-                    des: '專為VIP頂級客戶設計的會員儲值託運方案，提供獨家儲值優惠和高級託運服務，提升客戶滿意度。',
-                    image: require('@/static/image/pc/news/news5.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '試營運託運合作限時活動',
-                    des: '新車型或服務推出前的試營運託運合作活動，讓消費者首先體驗特別價格或專屬服務。',
-                    image: require('@/static/image/pc/news/news6.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '品牌車廂行銷廣告活動合作',
-                    des: '品牌和託運業者合作，透過車廂行銷廣告活動，提升品牌知名度和市場影響力。',
-                    image: require('@/static/image/pc/news/news7.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-                {
-                    title: '新款車輛機密運送合作',
-                    des: '車商和託運業者合作，共同制定行銷策略和協作計劃，實現雙贏的商機。',
-                    image: require('@/static/image/pc/news/news8.png'),
-                    date: '2023.08.10',
-                    url: '/news',
-                },
-            ],
+            caseList: caseListData.caseList,
+            news:newsListData.newsContainList.slice(0, 6),
             visionUrl:[
                 {url:'/model'},
                 {url:'/news'},

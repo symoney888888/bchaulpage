@@ -1348,26 +1348,30 @@ body {
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                                 background-position: center;
-                                @if $i == 1 {
-                                    background-image: url('~/static/image/pc/main/car-background.png');
-                                    @include mob-width {
-                                        background-image: url('~/static/image/mb/mbCar-background.png');
-                                    }
-                                } @else if $i == 2 {
-                                    background-image: url('~/static/image/pc/main/car-background.png');
-                                    @include mob-width {
-                                        background-image: url('~/static/image/mb/mbCar-background.png');
-                                    }
-                                } @else if $i == 3 {
-                                    background-image: url('~/static/image/pc/main/car-background.png');
-                                    @include mob-width {
-                                        background-image: url('~/static/image/mb/mbCar-background.png');
-                                    }
-                                } @else if $i == 4 {
-                                    background-image: url('~/static/image/pc/main/car-background.png');
-                                    @include mob-width {
-                                        background-image: url('~/static/image/mb/mbCar-background.png');
-                                    }
+                                // @if $i == 1 {
+                                //     background-image: url('~/static/image/pc/main/car-background.png');
+                                //     @include mob-width {
+                                //         background-image: url('~/static/image/mb/mbCar-background.png');
+                                //     }
+                                // } @else if $i == 2 {
+                                //     background-image: url('~/static/image/pc/main/car-background.png');
+                                //     @include mob-width {
+                                //         background-image: url('~/static/image/mb/mbCar-background.png');
+                                //     }
+                                // } @else if $i == 3 {
+                                //     background-image: url('~/static/image/pc/main/car-background.png');
+                                //     @include mob-width {
+                                //         background-image: url('~/static/image/mb/mbCar-background.png');
+                                //     }
+                                // } @else if $i == 4 {
+                                //     background-image: url('~/static/image/pc/main/car-background.png');
+                                //     @include mob-width {
+                                //         background-image: url('~/static/image/mb/mbCar-background.png');
+                                //     }
+                                // }
+                                img{
+                                    width: 100%;
+                                    display: block;
                                 }
                             }
                         }
@@ -1428,6 +1432,10 @@ body {
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                                 background-position: center;
+                                img{
+                                    width: 100%;
+                                    display: block;
+                                }
                             }
                         }
                     }
@@ -2094,7 +2102,6 @@ body {
     }
 }
 #newsPage {
-    overflow-x: hidden;
     .newsContain {
         width: 100%;
         position: relative;

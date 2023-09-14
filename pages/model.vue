@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="modelImg">
-                                    <img :src="item.image" />
+                                    <img :src="require(`@/static/image${item.image}`)" />
                                 </div>
                             </div>
                         </swiper-slide>
@@ -68,6 +68,7 @@
     </div>
 </template>
 <script>
+import modelListData from '~/assets/json/modelPageData/modelList.json'
 export default {
     data() {
         return {
@@ -92,24 +93,7 @@ export default {
                     }
                 ],
             },
-            modelList: [
-                {
-                    title: '11噸箱型單載託運車',
-                    des: '載重11噸，為單輛車託運而設。保護車輛不受外界影響，確保安全運輸。',
-                    image: require('@/static/image/pc/model/model1.png'),
-                },
-                {
-                    title: '17噸箱型雙載託運車',
-                    des: '載重17噸，可同時託運兩輛車輛。高效解決方案，為多輛車提供安全便捷的運輸。',
-                    image: require('@/static/image/pc/model/model2.png'),
-                },
-                {
-                    title: '26噸箱型4載託運車',
-                    des: '載重26噸，適合同時託運四輛車輛。卓越運輸能力，確保多車同時達到目的地，安全無虞。',
-                    image: require('@/static/image/pc/model/model3.png'),
-                },
-                
-            ],
+            modelList: modelListData.modelList,
             swiperOption: {
                 autoplay: 2000,
                 // speed: 300,

@@ -131,7 +131,7 @@
                             <swiper-slide :class="`teamBtn__${index + 1}`" v-for="(item, index) in teamList" :key="'teamBtn' + index" data-anime>
                                 <div :class="`teamBtn__${index + 1}-anime modelListAnime`">
                                     <div class="teamBtnImg">
-                                        <img :src="item.img" />
+                                        <img :src="require(`@/static/image${item.image}`)" />
                                     </div>
                                     <div class="teamBtnTxt">
                                         <div class="teamBtnTxtWrap">
@@ -190,6 +190,7 @@
     </div>
 </template>
 <script>
+import teamListData from '~/assets/json/aboutPageData/teamList.json'
 export default {
     data() {
         return {
@@ -207,32 +208,6 @@ export default {
                 {
                     url: '/service',
                     txt: '專利透明車廂運載車介紹',
-                },
-            ],
-            teamList: [
-                {
-                    name: '總經理-吳宗達',
-                    enName: 'CEO-ZONG DA WU',
-                    des: '寶輇團隊隊長，多年駕駛多款跑車經驗，了解頂級客群對於車輛託運的需求與擔心，擁有職業大貨車駕照及多次跑車運載經驗。',
-                    img: require('@/static/image/pc/aboutUs/person1.png'),
-                },
-                {
-                    name: '協理-彭彥鈞',
-                    enName: 'Assistant Manager-PENG YAN JUN',
-                    des: '仔細且謹慎熱情的服務精神，謹守紀律的特質，持有合格職業大貨車駕照，並擁有4年以上託運超跑運載經驗。熟悉各種頂級車輛特性與車主的需求。',
-                    img: require('@/static/image/pc/aboutUs/person2.png'),
-                },
-                {
-                    name: '運輸工程師-簡上捷',
-                    enName: 'Transportation Engineer-SHANG JIE JIAN',
-                    des: '個性警慎，謹守紀律的特質，持有合格職業大貨車駕照，並擁有3年以上大貨車跑車、豪車託運豐富經驗。',
-                    img: require('@/static/image/pc/aboutUs/person3.png'),
-                },
-                {
-                    name: '運輸工程師-游健勳',
-                    enName: 'Transportation Engineer-YOU JIANXUN',
-                    des: '個性務實，謹守紀律的特質，持有合格職業大貨車駕照，並擁有6年以上大貨車跑車、豪車託運豐富經驗。',
-                    img: require('@/static/image/pc/aboutUs/person4.png'),
                 },
             ],
             swiperOption: {
@@ -257,6 +232,7 @@ export default {
                     prevEl: '.swiper-button-prev',
                 },
             },
+            teamList: teamListData.teamList
         }
     },
     mounted() {
